@@ -1,0 +1,1 @@
+Sitemap: https://seminar.example.com/sitemap.xml

@@ -1,0 +1,10 @@
+<script>
+document.addEventListener('scroll', function() {
+  document.querySelectorAll('.scroll-fade-up').forEach(function(el) {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight - 100) {
+      el.classList.add('visible');
+    }
+  });
+});
+</script>

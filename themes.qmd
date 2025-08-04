@@ -1,0 +1,20 @@
+---
+title: "Thematic Areas"
+---
+
+# Thematic Areas
+
+-   **Agrobiodiversity Conservation and Community Seed Systems**\
+    Ensuring sustainable seed networks, genetic resource conservation, and farmer-led initiatives.
+
+-   **Agroecological Transitions and Soil Health**\
+    Focusing on regenerative farming practices and improving soil ecosystems.
+
+-   **Climate Resilience and Ecosystem Restoration in Agriculture**\
+    Adopting strategies to mitigate climate impacts and restore degraded ecosystems.
+
+-   **Governance, Policy, and Indigenous Knowledge Systems**\
+    Integrating traditional practices with contemporary governance and policy frameworks.
+
+-   **Equity, Youth, and Inclusion in Agrobiodiversity**\
+    Empowering marginalized communities and involving youth in biodiversity stewardship.

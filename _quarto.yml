@@ -1,0 +1,58 @@
+project:
+  type: website
+  output-dir: docs
+  resources: 
+    - "*.png"
+    - "*.jpeg"
+    - "*.svg"
+    - "*.pdf"
+    - CNAME
+
+website:
+  title: "KAbCon 2025"
+  description: "International Conference on Community Agrobiodiversity Management in Kerala"
+  site-url: "https://kabcon2025.org"
+  repo-url: "https://github.com/YourOrg/kabcon2025"
+  # repo-actions: [issue]
+  search: true
+  favicon: favicon.png
+  image: banner.png
+  navbar:
+    logo: logo.png
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: objectives.qmd
+        text: Objectives
+      - href: themes.qmd
+        text: Themes
+      - href: highlights.qmd
+        text: Highlights
+      - href: tours.qmd
+        text: Tours
+    right:
+      - icon: github
+        href: "https://github.com/YourOrg/kabcon2025"
+      - icon: twitter
+        href: "https://twitter.com/kabcon2025"
+  page-footer:
+    left: |
+      © 2025 Kerala State Biodiversity Board & Kerala Agricultural University  
+      Built with [Quarto](https://quarto.org)
+    right: |
+      [Contact Us](mailto:info@kabcon2025.org)
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-location: left
+    smooth-scroll: true
+    code-link: true
+    page-layout: full
+    include-after-body: scripts.html
+
+editor: visual
