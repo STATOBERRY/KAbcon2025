@@ -22,11 +22,11 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: about.qmd
+      - href: index.qmd#about
         text: About
-      - href: objectives.qmd
+      - href: index.qmd#objectives
         text: Objectives
-      - href: themes.qmd
+      - href: index.qmd#themes
         text: Themes
       - href: highlights.qmd
         text: Highlights
@@ -48,7 +48,7 @@ format:
   html:
     theme: cosmo
     css: styles.css
-    toc: true
+    #toc: true
     toc-location: left
     smooth-scroll: true
     code-link: true

@@ -7,4 +7,321 @@
   opacity: 1;
   transform: translateY(0);
 }
-/* css styles */
+/*kabcon_title */
+
+.kabcon-title {
+  font-family: 'Lato';   /* Change to any font you prefer */
+  font-size: .5em;                /* Adjust size */
+  font-weight: bold;               /* Optional */
+  color: #ffffff;                  /* Optional color */
+}
+/* Hero Section Styles */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: filter 0.3s ease;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin: 0 20px;
+}
+
+.hero-title {
+  transition: all 0.5s ease;
+}
+
+.hero-title h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 0;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+  line-height: 1.2;
+  letter-spacing: 2px;
+}
+
+.hero-details {
+  background: rgba(0, 0, 0, 0.6);           /* Dark semi-transparent */
+  padding: 25px 30px;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Softer border */
+  border-radius: 12px;
+  backdrop-filter: blur(10px);             /* Add blur effect */
+  -webkit-backdrop-filter: blur(10px);     /* Safari support */
+  margin-top: 20px;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+  color: #ffffff;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Optional shadow */
+}
+
+.hero-details.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-details strong {
+  font-size: 1.4rem;
+  color: #ffd700;
+  display: block;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Increase readability */
+}
+
+.hero-details blockquote {
+  font-size: 1.3rem;
+  color: #e0f7fa;
+  border-left: none;
+  padding-left: 0;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Increase readability */
+}
+
+.hero-details .btn {
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);  /* Subtle shadow */
+}
+
+.hero-details .btn:hover {
+  background: #ffd700;
+  color: black;
+}
+
+
+/* Content Section */
+.content-section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.content-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #2c3e50;
+}
+
+.content-section ul {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.content-section li {
+  margin-bottom: 10px;
+  color: #34495e;
+}
+
+/* Scroll Effect */
+.hero-blurred {
+  filter: blur(5px) brightness(0.7);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .hero-title h1 {
+    font-size: 2.8rem;
+    letter-spacing: 1px;
+  }
+  
+  .hero-details {
+    padding: 25px 20px;
+    margin: 0 10px;
+    margin-top: 20px;
+  }
+  
+  .hero-details blockquote {
+    font-size: 1.2rem;
+  }
+  
+  .hero-details .btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-title h1 {
+    font-size: 2.2rem;
+    letter-spacing: 0.5px;
+  }
+  
+  .hero-details strong {
+    font-size: 1.1rem;
+  }
+  
+  .hero-details blockquote {
+    font-size: 1.1rem;
+  }
+}
+
+
+/* Navigation bar */
+.navbar {
+  background-color: #ffffff !important;
+  border-bottom: 2px solid #e0e0e0;
+  font-family: 'Georgia', serif;
+}
+
+.navbar-brand img {
+  height: 50px;
+}
+
+.navbar-nav .nav-link {
+  color: #003366 !important;
+  margin-right: 12px;
+  font-weight: 500;
+  position: relative;
+}
+
+.navbar-nav .nav-link::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #003366;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+}
+
+.navbar-nav .nav-link:hover::after {
+  width: 100%;
+}
+
+<style>
+.text-slider-box {
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(90deg, #e0f7fa, #b2ebf2, #e0f7fa); /* Gradient background */
+  border: 2px solid #009688; /* Teal border */
+  border-radius: 12px;
+  padding: 12px 20px;
+  margin: 40px 0;
+  position: relative;
+  height: 70px; /* Slightly taller for better readability */
+  box-shadow: 0 4px 12px rgba(0, 150, 136, 0.3); /* Soft shadow */
+}
+
+.text-slider-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slideText 30s linear infinite;
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #004d40;
+  padding-left: 50%;
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Optional: Pause animation on hover */
+.text-slider-content:hover {
+  animation-play-state: paused;
+  cursor: pointer;
+}
+</style>
+
+
+/* objectives container */
+
+.objectives-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.objective-box {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 30%;
+  min-width: 280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-family: 'Roboto', 'Arial', sans-serif;
+}
+
+.objective-box strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}.objectives-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.objective-box {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 30%;
+  min-width: 280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.objective-box strong {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+
+
+
+
+
+
+

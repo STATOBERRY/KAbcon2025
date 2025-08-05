@@ -8,3 +8,86 @@ document.addEventListener('scroll', function() {
   });
 });
 </script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const heroImage = document.querySelector('.hero-image');
+  const heroSection = document.querySelector('.hero-section');
+  const heroDetails = document.querySelector('.hero-details');
+  
+  if (heroImage && heroSection && heroDetails) {
+    window.addEventListener('scroll', function() {
+      const scrolled = window.pageYOffset;
+      const heroHeight = heroSection.offsetHeight;
+      const showDetailsThreshold = heroHeight * 0.15; // Show details at 15% scroll
+      const blurThreshold = heroHeight * 0.3; // Start blur at 30% scroll
+      
+      // Show/hide details box
+      if (scrolled > showDetailsThreshold) {
+        heroDetails.classList.add('show');
+      } else {
+        heroDetails.classList.remove('show');
+      }
+      
+      // Apply blur effect
+      if (scrolled > blurThreshold) {
+        const blurAmount = Math.min((scrolled - blurThreshold) / (heroHeight * 0.4), 1);
+        heroImage.style.filter = `blur(${blurAmount * 8}px) brightness(${1 - blurAmount * 0.4})`;
+      } else {
+        heroImage.style.filter = 'blur(0px) brightness(1)';
+      }
+    });
+  }
+});
+</script>
+
+<style>
+.text-slider-container {
+  overflow: hidden;
+  width: 100%;
+  background: #f0f0f0;
+}
+
+.text-slider {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slideText 35s linear infinite;
+  font-size: 1.2rem; /* Adjust font size as needed */
+  padding: 10px;
+}
+
+@keyframes slideText {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+</style>
+
+<script>
+let currentSlide = 0;
+const slides = document.querySelectorAll('.slide-img');
+const totalSlides = slides.length;
+
+function showSlide(index) {
+  slides.forEach((img, i) => {
+    img.style.display = i === index ? 'block' : 'none';
+  });
+}
+
+function nextSlide() {
+  currentSlide = (currentSlide + 1) % totalSlides;
+  showSlide(currentSlide);
+}
+
+showSlide(currentSlide);
+setInterval(nextSlide, 5000); // Change every 3 seconds
+</script>
+
+
+:::
+
+
+

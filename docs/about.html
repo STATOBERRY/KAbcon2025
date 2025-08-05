@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.39">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,7 +36,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
@@ -139,24 +139,13 @@ ul.task-list li input[type="checkbox"] {
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#about-kabcon-2025" id="toc-about-kabcon-2025" class="nav-link active" data-scroll-target="#about-kabcon-2025">About KAbCon 2025</a>
-  <ul class="collapse">
-  <li><a href="#celebrations-milestones" id="toc-celebrations-milestones" class="nav-link" data-scroll-target="#celebrations-milestones">Celebrations &amp; Milestones</a></li>
-  </ul></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/YourOrg/kabcon2025/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></nav>
-</nav>
+  
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content column-page-right" id="quarto-document-content">
+<main class="content column-page" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -165,7 +154,7 @@ ul.task-list li input[type="checkbox"] {
 
 
 
-<div class="quarto-title-meta column-page-right">
+<div class="quarto-title-meta column-page">
 
     
   
@@ -215,6 +204,90 @@ document.addEventListener('scroll', function() {
 });
 
 </script>
+
+
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function() {
+
+  const heroImage = document.querySelector('.hero-image');
+
+  const heroSection = document.querySelector('.hero-section');
+
+  const heroDetails = document.querySelector('.hero-details');
+
+  
+
+  if (heroImage && heroSection && heroDetails) {
+
+    window.addEventListener('scroll', function() {
+
+      const scrolled = window.pageYOffset;
+
+      const heroHeight = heroSection.offsetHeight;
+
+      const showDetailsThreshold = heroHeight * 0.15; // Show details at 15% scroll
+
+      const blurThreshold = heroHeight * 0.3; // Start blur at 30% scroll
+
+      
+
+      // Show/hide details box
+
+      if (scrolled > showDetailsThreshold) {
+
+        heroDetails.classList.add('show');
+
+      } else {
+
+        heroDetails.classList.remove('show');
+
+      }
+
+      
+
+      // Apply blur effect
+
+      if (scrolled > blurThreshold) {
+
+        const blurAmount = Math.min((scrolled - blurThreshold) / (heroHeight * 0.4), 1);
+
+        heroImage.style.filter = `blur(${blurAmount * 8}px) brightness(${1 - blurAmount * 0.4})`;
+
+      } else {
+
+        heroImage.style.filter = 'blur(0px) brightness(1)';
+
+      }
+
+    });
+
+  }
+
+});
+
+</script>
+
+
+
+<style>
+
+  div[style*="transition: transform"] {
+
+    cursor: pointer;
+
+  }
+
+  div[style*="transition: transform"]:hover {
+
+    transform: translateY(-5px);
+
+  }
+
+</style>
+
+
 
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
@@ -642,7 +715,7 @@ Built with <a href="https://quarto.org">Quarto</a></p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/YourOrg/kabcon2025/issues/new" class="toc-action"><i class="bi bi-github"></i>Report an issue</a></li></ul></div></div>
+    </div>
     <div class="nav-footer-right">
 <p><a href="mailto:info@kabcon2025.org">Contact Us</a></p>
 </div>
