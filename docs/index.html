@@ -186,27 +186,87 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div><section id="objectives" class="level2">
 <h2 data-anchor-id="objectives"><span class="text-black">The</span> <span class="text-green">Conference Objectives</span></h2>
+<div class="objectives-section">
+<div class="background-image">
+
+</div>
+<p><!-- Blurred background --></p>
 <div class="objectives-container">
 <div class="objective-box">
-<p><strong>Promote Knowledge Exchange</strong><br>
+<p><i class="fas fa-exchange-alt icon"></i> <strong>Promote Knowledge Exchange</strong><br>
 Promote knowledge exchange (both traditional and modern) in agrobiodiversity conservation and mainstreaming, focusing on alternate seed systems, regenerative agriculture, and food production practices.</p>
 </div>
 <div class="objective-box">
-<p><strong>Showcase Farmer Innovations</strong><br>
-Showcase innovations of the custodian farmers of Kerala in crop genetic diversity conservation, enhancement, and sustainable management that strengthen climate adaptation, resilience, and food and nutrition security.</p>
+<p><i class="fas fa-seedling icon"></i> <strong>Showcase Farmer Innovations</strong><br>
+Showcase innovations of the custodian farmers of Kerala in crop genetic diversity conservation, enhancement, and sustainable management that strengthen climate adaptation, resilience and food and nutrition security.</p>
 </div>
 <div class="objective-box">
-<p><strong>Empower Local Institutions</strong><br>
+<p><i class="fas fa-users icon"></i> <strong>Empower Local Institutions</strong><br>
 Empower local governance institutions and community biodiversity management groups to localise global efforts aligned with the UN Sustainable Development Goals (SDGs) and the Kunming-Montreal Global Biodiversity Framework (KMG).</p>
+</div>
 </div>
 </div>
 </section><section id="themes" class="level2">
 <h2 data-anchor-id="themes">Key Themes</h2>
-<p>• Agrobiodiversity Conservation and Community Seed Systems • Agroecological Transitions and Soil Health • Climate Resilience and Ecosystem Restoration in Agriculture • Governance, Policy, and Indigenous Knowledge Systems • Equity, Youth, and Inclusion in Agrobiodiversity</p>
+<div class="themes-grid">
+<div class="theme-card">
+<i class="fas fa-seedling icon"></i>
+<div class="theme-title">
+Agrobiodiversity Conservation and Community Seed Systems
+</div>
+</div>
+<div class="theme-card">
+<i class="fas fa-tractor icon"></i>
+<div class="theme-title">
+Agroecological Transitions and Soil Health
+</div>
+</div>
+<div class="theme-card">
+<i class="fas fa-globe icon"></i>
+<div class="theme-title">
+Climate Resilience and Ecosystem Restoration in Agriculture
+</div>
+</div>
+<div class="theme-card">
+<i class="fas fa-landmark icon"></i>
+<div class="theme-title">
+Governance, Policy, and Indigenous Knowledge Systems
+</div>
+</div>
+<div class="theme-card">
+<i class="fas fa-users icon"></i>
+<div class="theme-title">
+Equity, Youth, and Inclusion in Agrobiodiversity
+</div>
+</div>
+</div>
+</section><section id="section" class="level2">
+<h2 data-anchor-id="section"></h2>
+<div class="participants-container">
+<div class="participants-image">
+<p><a href="https://www.google.com/maps/place/Agricultural+College+Stadium/@8.4291774,76.9870543,17z/data=!4m6!3m5!1s0x3b05a53813b1d889:0x699ee75d0c30b71f!8m2!3d8.4290239!4d76.9864175!16s%2Fg%2F11bx56pvpf?entry=ttu&amp;g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"> <img src="www/college.png" alt=" Event Location" style="cursor: pointer;"> </a></p>
+</div>
+<div class="participants-text">
+<div class="participants-heading">
+Expected Participants
+</div>
+<p><!-- Styled Heading --> - <strong>Renowned experts</strong> in Agrobiodiversity, Sustainable Agriculture, and Food &amp; Nutrition - International and national <strong>scientists and researchers</strong> - <strong>Policymakers</strong> and biodiversity experts - Students and faculty from <strong>agricultural and environmental sciences</strong> - <strong>Private sector, NGOs, and civil society</strong> - <strong>Indigenous knowledge holders and farmers</strong> - Representatives from <strong>FAO, UNEP, CBD</strong>, and other global bodies</p>
+</div>
+</div>
 
 
 </section>
 </div>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+
+
 
 
 <script>
@@ -347,39 +407,43 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 
-let currentSlide = 0;
+document.addEventListener("DOMContentLoaded", () => {
 
-const slides = document.querySelectorAll('.slide-img');
+  const slides = document.querySelectorAll('.slide-img');
 
-const totalSlides = slides.length;
+  let currentSlide = 0;
 
-
-
-function showSlide(index) {
-
-  slides.forEach((img, i) => {
-
-    img.style.display = i === index ? 'block' : 'none';
-
-  });
-
-}
+  const totalSlides = slides.length;
 
 
 
-function nextSlide() {
+  function showSlide(index) {
 
-  currentSlide = (currentSlide + 1) % totalSlides;
+    slides.forEach((slide, i) => {
+
+      slide.style.display = i === index ? 'block' : 'none';
+
+    });
+
+  }
+
+
+
+  function nextSlide() {
+
+    currentSlide = (currentSlide + 1) % totalSlides;
+
+    showSlide(currentSlide);
+
+  }
+
+
 
   showSlide(currentSlide);
 
-}
+  setInterval(nextSlide, 3000); // Change slide every 3 seconds
 
-
-
-showSlide(currentSlide);
-
-setInterval(nextSlide, 5000); // Change every 3 seconds
+});
 
 </script>
 
@@ -387,7 +451,81 @@ setInterval(nextSlide, 5000); // Change every 3 seconds
 
 
 
-:::
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const boxes = document.querySelectorAll('.objective-box');
+
+
+
+  const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add('visible');
+
+        observer.unobserve(entry.target);
+
+      }
+
+    });
+
+  }, { threshold: 0.1 });
+
+
+
+  boxes.forEach(box => {
+
+    observer.observe(box);
+
+  });
+
+});
+
+</script>
+
+
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const boxes = document.querySelectorAll('.objective-box');
+
+
+
+  const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add('visible');  // Show when in view
+
+      } else {
+
+        entry.target.classList.remove('visible');  // Hide when out of view
+
+      }
+
+    });
+
+  }, { threshold: 0.1 }); // Trigger when 10% of the box is visible
+
+
+
+  boxes.forEach(box => observer.observe(box));
+
+});
+
+</script>
+
+
 
 
 

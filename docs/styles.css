@@ -318,6 +318,233 @@
   font-size: 1.1rem;
 }
 
+.objectives-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.objective-box {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 30%;
+  min-width: 280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-family: 'Roboto', 'Arial', sans-serif;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.objective-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.objective-box:hover {
+  transform: scale(1.03);
+  transition: transform 0.3s ease;
+}
+
+
+.objective-box {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 30%;
+  min-width: 280px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  font-family: 'Lato', 'Helvetica', sans-serif;
+  opacity: 0;
+  transform: translateY(50px) scale(1);
+  transition: transform 0.5s ease, opacity 0.5s ease, background 0.5s ease;
+  background: linear-gradient(135deg, #ffffff, #f9f9f9); /* Subtle default */
+}
+
+.objective-box.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Hover gradients per box */
+.objective-box.visible:hover {
+  transform: translateY(0) scale(1.03);
+}
+
+/* First box gradient */
+.objective-box:nth-child(1):hover {
+  background: linear-gradient(135deg, #d0f0c0, #a0e7e5); /* Green to light blue */
+}
+
+/* Second box gradient */
+.objective-box:nth-child(2):hover {
+  background: linear-gradient(135deg, #ffe29f, #ffa07a); /* Peach to orange */
+}
+
+/* Third box gradient */
+.objective-box:nth-child(3):hover {
+  background: linear-gradient(135deg, #c3cfe2, #a18cd1); /* Light blue to violet */
+}
+
+.objectives-section {
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+/* Ensure objective boxes stay on top */
+.objectives-container {
+  position: relative;
+  z-index: 2;
+}
+
+
+.theme-box {
+  background: #ffffff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.5s ease;
+}
+.theme-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+.themes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.theme-card {
+  background: #ffffff;
+  border: 1px solid #d0d0d0;
+  border-radius: 10px;
+  padding: 1.2rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-family: 'Lato', 'Arial', sans-serif;
+}
+
+.theme-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-card .icon {
+  font-size: 2rem;
+  color: #0077cc;
+  margin-bottom: 0.8rem;
+}
+
+.theme-card .theme-title {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.participants-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.participants-image {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.participants-image img {
+  max-width: 70%;  /* Reduce size slightly */
+  margin-left: auto;  /* Push right */
+  margin-right: 0;
+  display: block;
+}
+
+.participants-text {
+  flex: 2;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.participants-text ul {
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+
+
+.participants-heading {
+  display: inline-block;
+  background-color: #2c7a7b;  /* Teal tone; change as needed */
+  color: white;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;        /* Rounded pill shape */
+  font-weight: bold;
+  font-size: 1.2rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+<style>
+.hover-container {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.hover-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  cursor: pointer;
+}
+
+.hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.hover-container:hover .hover-text {
+  opacity: 1;
+}
+</style>
+
+
+
+
+
+
+
+
 
 
 

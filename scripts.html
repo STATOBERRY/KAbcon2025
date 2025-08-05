@@ -1,3 +1,8 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+
+
 <script>
 document.addEventListener('scroll', function() {
   document.querySelectorAll('.scroll-fade-up').forEach(function(el) {
@@ -67,27 +72,66 @@ document.addEventListener('DOMContentLoaded', function() {
 </style>
 
 <script>
-let currentSlide = 0;
-const slides = document.querySelectorAll('.slide-img');
-const totalSlides = slides.length;
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll('.slide-img');
+  let currentSlide = 0;
+  const totalSlides = slides.length;
 
-function showSlide(index) {
-  slides.forEach((img, i) => {
-    img.style.display = i === index ? 'block' : 'none';
-  });
-}
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.display = i === index ? 'block' : 'none';
+    });
+  }
 
-function nextSlide() {
-  currentSlide = (currentSlide + 1) % totalSlides;
+  function nextSlide() {
+    currentSlide = (currentSlide + 1) % totalSlides;
+    showSlide(currentSlide);
+  }
+
   showSlide(currentSlide);
-}
-
-showSlide(currentSlide);
-setInterval(nextSlide, 5000); // Change every 3 seconds
+  setInterval(nextSlide, 3000); // Change slide every 3 seconds
+});
 </script>
 
 
-:::
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const boxes = document.querySelectorAll('.objective-box');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1 });
+
+  boxes.forEach(box => {
+    observer.observe(box);
+  });
+});
+</script>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const boxes = document.querySelectorAll('.objective-box');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');  // Show when in view
+      } else {
+        entry.target.classList.remove('visible');  // Hide when out of view
+      }
+    });
+  }, { threshold: 0.1 }); // Trigger when 10% of the box is visible
+
+  boxes.forEach(box => observer.observe(box));
+});
+</script>
+
 
 
 
