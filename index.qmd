@@ -1,11 +1,9 @@
 ---
-format:
-  html:
-    page-layout: custom
+format: html
 ---
 
 ::::::: hero-section
-::: hero-image
+::: hero-image 
 <img src="www/banner.png" style="width:100%; height:auto; max-height:800px;"/>
 :::
 
@@ -25,14 +23,15 @@ format:
 :::::
 :::::::
 
+:::: text-slider-box
+::: text-slider-content
+```         
+We are delighted to invite you to participate in the International Conference on Community Biodiversity Management, scheduled to take place from 16–18 August 2025 at the prestigious College of Agriculture, Vellayani, under the aegis of Kerala Agricultural University, located in Thiruvananthapuram, Kerala, India.
+```
+:::
+::::
 
-<div class="text-slider-box">
-  <div class="text-slider-content">
-    We are delighted to invite you to participate in the International Conference on Community Biodiversity Management, scheduled to take place from 16–18 August 2025 at the prestigious College of Agriculture, Vellayani, under the aegis of Kerala Agricultural University, located in Thiruvananthapuram, Kerala, India.
-  </div>
-</div>
-
-::::: columns
+::::::::::::::::::::::::::: columns
 ::: {.column width="50%"}
 # [About]{.text-black} [The Kerala Agrobiodiversity Conference]{.text-green} {#about}
 
@@ -43,102 +42,97 @@ Jointly organized by the Kerala State Biodiversity Board (KSBB) and Kerala Agric
 The conference is to contribute directly to key international frameworks and targets including the United Nations Sustainable Development Goals - SDG 2: Zero Hunger, SDG 13: Climate Action, and SDG 15: Life on Land - and the Kunming-Montreal Global Biodiversity Framework (KMGBF), particularly Targets 4 (Genetic diversity), 8 (Climate Resilience), and 10 (Sustainable Agriculture).
 :::
 
-::: {.column width="50%"}
-<div class="slider" style="border-radius: 10px; overflow: hidden; height: 550px; background: #000;">
-  <img src="www/img1.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;">
-  <img src="www/img2.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;">
-  <img src="www/img3.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;">
-  <img src="www/img4.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;">
-  <img src="www/img5.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;">
-  <img src="www/img6.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;">
-</div>
+:::: {.column width="50%"}
+::: {.slider style="border-radius: 10px; overflow: hidden; height: 550px; background: #000;"}
+<img src="www/img1.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;"/> <img src="www/img2.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;"/> <img src="www/img3.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;"/> <img src="www/img4.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;"/> <img src="www/img5.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;"/> <img src="www/img6.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;"/>
 :::
+::::
 
 ## [The]{.text-black} [Conference Objectives]{.text-green} {#objectives}
-<div class="objectives-section">
-  <div class="background-image"></div> <!-- Blurred background -->
+
+:::::::: objectives-section
+::: background-image
+:::
+
+<!-- Blurred background -->
 
 :::::: objectives-container
 ::: objective-box
-<i class="fas fa-exchange-alt icon"></i>
-<strong>Promote Knowledge Exchange</strong>  
+<i class="fas fa-exchange-alt icon"></i> <strong>Promote Knowledge Exchange</strong>\
 Promote knowledge exchange (both traditional and modern) in agrobiodiversity conservation and mainstreaming, focusing on alternate seed systems, regenerative agriculture, and food production practices.
 :::
 
 ::: objective-box
-<i class="fas fa-seedling icon"></i>
-<strong>Showcase Farmer Innovations</strong>  
+<i class="fas fa-seedling icon"></i> <strong>Showcase Farmer Innovations</strong>\
 Showcase innovations of the custodian farmers of Kerala in crop genetic diversity conservation, enhancement, and sustainable management that strengthen climate adaptation, resilience and food and nutrition security.
 :::
 
 ::: objective-box
-<i class="fas fa-users icon"></i>
-<strong>Empower Local Institutions</strong>  
+<i class="fas fa-users icon"></i> <strong>Empower Local Institutions</strong>\
 Empower local governance institutions and community biodiversity management groups to localise global efforts aligned with the UN Sustainable Development Goals (SDGs) and the Kunming-Montreal Global Biodiversity Framework (KMG).
 :::
 ::::::
-
-</div>
-
-
+::::::::
 
 ## Key Themes {#themes}
 
-:::: {.themes-grid}
-
-::: {.theme-card}
+::::::::::::: themes-grid
+:::: theme-card
 <i class="fas fa-seedling icon"></i>
-<div class="theme-title">Agrobiodiversity Conservation and Community Seed Systems </div>
-:::
 
-::: {.theme-card}
-<i class="fas fa-tractor icon"></i>
-<div class="theme-title">Agroecological Transitions and Soil Health</div>
+::: theme-title
+Agrobiodiversity Conservation and Community Seed Systems
 :::
-
-::: {.theme-card}
-<i class="fas fa-globe icon"></i>
-<div class="theme-title">Climate Resilience and Ecosystem Restoration in Agriculture</div>
-:::
-
-::: {.theme-card}
-<i class="fas fa-landmark icon"></i>
-<div class="theme-title">Governance, Policy, and Indigenous Knowledge Systems</div>
-:::
-
-::: {.theme-card}
-<i class="fas fa-users icon"></i>
-<div class="theme-title">Equity, Youth, and Inclusion in Agrobiodiversity</div>
-:::
-
 ::::
 
+:::: theme-card
+<i class="fas fa-tractor icon"></i>
 
-##
+::: theme-title
+Agroecological Transitions and Soil Health
+:::
+::::
 
-:::::: {.participants-container}
-::: {.participants-image}
-<a href="https://www.google.com/maps/place/Agricultural+College+Stadium/@8.4291774,76.9870543,17z/data=!4m6!3m5!1s0x3b05a53813b1d889:0x699ee75d0c30b71f!8m2!3d8.4290239!4d76.9864175!16s%2Fg%2F11bx56pvpf?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D">
-  <img src="www/college.png" alt=" Event Location" style="cursor: pointer;">
-</a>
+:::: theme-card
+<i class="fas fa-globe icon"></i>
+
+::: theme-title
+Climate Resilience and Ecosystem Restoration in Agriculture
 :::
-::: {.participants-text}
-<div class="participants-heading">Expected Participants</div> <!-- Styled Heading -->
-- **Renowned experts** in Agrobiodiversity, Sustainable Agriculture, and Food & Nutrition
-- International and national **scientists and researchers**
-- **Policymakers** and biodiversity experts
-- Students and faculty from **agricultural and environmental sciences**
-- **Private sector, NGOs, and civil society**
-- **Indigenous knowledge holders and farmers**
-- Representatives from **FAO, UNEP, CBD**, and other global bodies
+::::
+
+:::: theme-card
+<i class="fas fa-landmark icon"></i>
+
+::: theme-title
+Governance, Policy, and Indigenous Knowledge Systems
 :::
+::::
+
+:::: theme-card
+<i class="fas fa-users icon"></i>
+
+::: theme-title
+Equity, Youth, and Inclusion in Agrobiodiversity
+:::
+::::
+:::::::::::::
+
+## 
+
+:::::: participants-container
+::: participants-image
+<a href="https://www.google.com/maps/place/Agricultural+College+Stadium/@8.4291774,76.9870543,17z/data=!4m6!3m5!1s0x3b05a53813b1d889:0x699ee75d0c30b71f!8m2!3d8.4290239!4d76.9864175!16s%2Fg%2F11bx56pvpf?entry=ttu&g_ep=EgoyMDI1MDczMC4wIKXMDSoASAFQAw%3D%3D"> <img src="www/college.png" alt=" Event Location" style="cursor: pointer;"/> </a>
+:::
+
+:::: participants-text
+::: participants-heading
+Expected Participants
+:::
+
+<!-- Styled Heading -->
+
+-   **Renowned experts** in Agrobiodiversity, Sustainable Agriculture, and Food & Nutrition - International and national **scientists and researchers** - **Policymakers** and biodiversity experts - Students and faculty from **agricultural and environmental sciences** - **Private sector, NGOs, and civil society** - **Indigenous knowledge holders and farmers** - Representatives from **FAO, UNEP, CBD**, and other global bodies
+::::
 ::::::
-
-
-
-
-
-
-
-
-
+:::::::::::::::::::::::::::
