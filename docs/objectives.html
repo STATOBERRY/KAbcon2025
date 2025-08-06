@@ -102,11 +102,11 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./objectives.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html#objectives"> 
 <span class="menu-text">Objectives</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./themes.html"> 
+    <a class="nav-link" href="./index.html#themes"> 
 <span class="menu-text">Themes</span></a>
   </li>  
   <li class="nav-item">
@@ -119,11 +119,6 @@ ul.task-list li input[type="checkbox"] {
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
-  <li class="nav-item compact">
-    <a class="nav-link" href="https://github.com/YourOrg/kabcon2025"> <i class="bi bi-github" role="img">
-</i> 
-<span class="menu-text"></span></a>
-  </li>  
   <li class="nav-item compact">
     <a class="nav-link" href="https://twitter.com/kabcon2025"> <i class="bi bi-twitter" role="img">
 </i> 
@@ -142,8 +137,7 @@ ul.task-list li input[type="checkbox"] {
   
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-    </div>
+    
 <!-- main -->
 <main class="content column-page" id="quarto-document-content">
 
@@ -178,6 +172,16 @@ ul.task-list li input[type="checkbox"] {
 </section>
 
 </main> <!-- /main -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+
+
+
+
 <script>
 
 document.addEventListener('scroll', function() {
@@ -264,35 +268,181 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-document.addEventListener('DOMContentLoaded', function() {
+<style>
 
-  // Smooth scrolling for anchor links
+.text-slider-container {
 
-  document.querySelectorAll('a[href^="#"]').forEach(anchor =&gt; {
+  overflow: hidden;
 
-    anchor.addEventListener('click', function (e) {
+  width: 100%;
 
-      e.preventDefault();
+  background: #f0f0f0;
 
-      const target = document.querySelector(this.getAttribute('href'));
+}
 
-      if (target) {
 
-        target.scrollIntoView({
 
-          behavior: 'smooth',
+.text-slider {
 
-          block: 'start'
+  display: inline-block;
 
-        });
+  white-space: nowrap;
+
+  animation: slideText 35s linear infinite;
+
+  font-size: 1.2rem; /* Adjust font size as needed */
+
+  padding: 10px;
+
+}
+
+
+
+@keyframes slideText {
+
+  0% {
+
+    transform: translateX(100%);
+
+  }
+
+  100% {
+
+    transform: translateX(-100%);
+
+  }
+
+}
+
+</style>
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const slides = document.querySelectorAll('.slide-img');
+
+  let currentSlide = 0;
+
+  const totalSlides = slides.length;
+
+
+
+  function showSlide(index) {
+
+    slides.forEach((slide, i) => {
+
+      slide.style.display = i === index ? 'block' : 'none';
+
+    });
+
+  }
+
+
+
+  function nextSlide() {
+
+    currentSlide = (currentSlide + 1) % totalSlides;
+
+    showSlide(currentSlide);
+
+  }
+
+
+
+  showSlide(currentSlide);
+
+  setInterval(nextSlide, 3000); // Change slide every 3 seconds
+
+});
+
+</script>
+
+
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const boxes = document.querySelectorAll('.objective-box');
+
+
+
+  const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add('visible');
+
+        observer.unobserve(entry.target);
 
       }
 
     });
 
+  }, { threshold: 0.1 });
+
+
+
+  boxes.forEach(box => {
+
+    observer.observe(box);
+
   });
 
 });
+
+</script>
+
+
+
+
+
+<script>
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const boxes = document.querySelectorAll('.objective-box');
+
+
+
+  const observer = new IntersectionObserver(entries => {
+
+    entries.forEach(entry => {
+
+      if (entry.isIntersecting) {
+
+        entry.target.classList.add('visible');  // Show when in view
+
+      } else {
+
+        entry.target.classList.remove('visible');  // Hide when out of view
+
+      }
+
+    });
+
+  }, { threshold: 0.1 }); // Trigger when 10% of the box is visible
+
+
+
+  boxes.forEach(box => observer.observe(box));
+
+});
+
+</script>
+
+
+
+
+
+
 
 
 
@@ -717,12 +867,11 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Kerala State Biodiversity Board &amp; Kerala Agricultural University<br>
-Built with <a href="https://quarto.org">Quarto</a></p>
+<p>© 2025 Kerala State Biodiversity Board &amp; Kerala Agricultural University</p>
 </div>   
     <div class="nav-footer-center">
-      &nbsp;
-    </div>
+<p>Powered by STATOBERRY LLP</p>
+</div>
     <div class="nav-footer-right">
 <p><a href="mailto:info@kabcon2025.org">Contact Us</a></p>
 </div>
