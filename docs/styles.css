@@ -2,9 +2,6 @@ body {
   padding-top: 0 !important;
 }
 
-
-/*kabcon_title */
-
 /* Hero Section Styles */
 .hero-section {
   position: relative;
@@ -469,6 +466,76 @@ html, body {
   color: #ffffff !important;
   text-decoration: underline;
 }
+
+
+/* Responsive Enhancements */
+
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    height: auto;  /* Allow height to adjust naturally */
+  }
+  .hero-image img {
+    height: auto;  /* Let image adapt to content height */
+  }
+  .hero-details {
+    max-width: 100%;
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+  .hero-details .btn {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+  .objectives-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .objective-box {
+    width: 100%;
+    max-width: 90%;
+  }
+  .participants-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .participants-grid {
+    width: 100%;
+    grid-template-columns: 1fr;
+  }
+  .slider {
+    max-height: 300px;
+  }
+  .theme-card {
+    font-size: 0.95rem;
+  }
+  .participant-card {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-details {
+    font-size: 0.9rem;
+    padding: 12px;
+  }
+  .hero-details strong {
+    font-size: 1rem;
+  }
+  .hero-details .btn {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  .marquee-content {
+    font-size: 0.9rem;
+  }
+  .theme-card .icon, .participant-card .icon {
+    font-size: 1.5rem;
+  }
+}
+
+
+
 
 
 

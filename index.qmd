@@ -25,27 +25,31 @@ format: html
 :::
 
 
-::::: columns
-::: {.column width="50%" style="padding-left: 40px; padding-right: 30px; text-align: justify; font-family: 'Georgia', serif;"}
-## [About]{.text-black} [The Kerala Agrobiodiversity Conference]{.text-green} {#about}  
+::: {.columns .about-section}
 
-The Kerala Agrobiodiversity Conference -2025 (KAbCon-2025), an international Conference on Community Agrobiodiversity Management: in Kerala invites researchers, policymakers, farmers, indigenous leaders, development professionals, and sustainability advocates from around the world is action to engage in a collaborative dialogue on the integration of traditional wisdom, materials and modern science, innovations and technologies for climate-resilient food systems in biodiversity hotspots.
+::: {.column width="100%" style="padding: 1rem; font-family: 'Georgia', serif;"}
+## <span class="text-black">About</span> <span class="text-green">The Kerala Agrobiodiversity Conference</span> {#about}
 
-Jointly organized by the Kerala State Biodiversity Board (KSBB) and Kerala Agricultural University, College of Agriculture, Vellayani, the conference forms part of the 70th anniversary celebrations of the College of Agriculture and KSBB’s 20-year experience and lessons in biodiversity conservation and sustainable development. This landmark event will also commemorate the 80th anniversary of the Food and Agriculture Organization (FAO) and World Food Day 2025, as well as the Centenary Year of Prof. M. S. Swaminathan, the visionary behind India’s Green Revolution.
+The Kerala Agrobiodiversity Conference -2025 (KAbCon-2025), an international Conference on Community Agrobiodiversity Management in Kerala invites researchers, policymakers, farmers, indigenous leaders, development professionals, and sustainability advocates from around the world to engage in a collaborative dialogue on the integration of traditional wisdom and modern innovations for climate-resilient food systems in biodiversity hotspots.
 
-The conference is to contribute directly to key international frameworks and targets including the United Nations Sustainable Development Goals - SDG 2: Zero Hunger, SDG 13: Climate Action, and SDG 15: Life on Land - and the Kunming-Montreal Global Biodiversity Framework (KMGBF), particularly Targets 4 (Genetic diversity), 8 (Climate Resilience), and 10 (Sustainable Agriculture).
+Jointly organized by the Kerala State Biodiversity Board (KSBB) and Kerala Agricultural University, College of Agriculture, Vellayani, this conference is part of the 70th anniversary celebrations of the College and KSBB’s 20-year experience in biodiversity conservation. It also commemorates the 80th anniversary of FAO and World Food Day 2025, and the Centenary Year of Prof. M. S. Swaminathan.
+
+This conference aims to contribute to key international goals including SDG 2 (Zero Hunger), SDG 13 (Climate Action), SDG 15 (Life on Land), and KMGBF Targets 4, 8, and 10.
 :::
 
-::: {.column width="50%"}
-<div class="slider" style="border-radius: 10px; overflow: hidden; height: 700px; background: #000;">
-  <img src="www/img1.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;">
-  <img src="www/img2.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;">
-  <img src="www/img3.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;">
-  <img src="www/img4.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;">
-  <img src="www/img5.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;">
-  <img src="www/img6.png" class="slide-img" style="width: 100%; height: 100%; object-fit: contain;">
+::: {.column width="100%" style="padding: 1rem;"}
+<div class="slider" style="border-radius: 10px; overflow: hidden; background: #000; max-height: 500px;">
+  <img src="www/img1.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/img2.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/img3.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/img4.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/img5.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/img6.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
 </div>
 :::
+
+:::
+
 
 ::: {.column width="100%" style="padding-left: 30px; font-family: 'Georgia', serif;"}
 ## [The]{.text-black} [Conference Objectives]{.text-green} {#objectives}  
