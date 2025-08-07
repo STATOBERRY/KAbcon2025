@@ -156,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
   </div>
 
   <!-- Bright Yellow Responsive Title -->
- <div class="hero-title-overlay scroll-fade">
+<div class="hero-title-overlay scroll-fade">
   <span class="desktop-title">Kerala Agrobiodiversity Conference 2025</span>
   <span class="mobile-title">
     Kerala<br>
@@ -364,6 +364,31 @@ body.scrolled .scroll-fade {
     top: 18%;
   }
 }
+/* Show desktop title by default, hide mobile title */
+.desktop-title {
+  display: inline;
+}
+.mobile-title {
+  display: none;
+}
+
+/* Force layout change on small screens */
+@media (max-width: 768px) {
+  .desktop-title {
+    display: none;
+  }
+  .mobile-title {
+    display: inline;
+  }
+
+  .hero-title-overlay {
+    top: 18%;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    padding: 0 10px;
+  }
+}
+
 
 
 </style>
