@@ -336,7 +336,7 @@ document.addEventListener('scroll', function () {
       <img src="www/image1.webp" class="slide-img active" />
       <img src="www/image2.webp" class="slide-img" />
       <img src="www/image3.webp" class="slide-img" />
-      <img src="www/image4.webp" class="slide-img" />
+      <img src="www/image6.webp" class="slide-img" />
       <img src="www/image5.webp" class="slide-img" />
     </div>
   </div>

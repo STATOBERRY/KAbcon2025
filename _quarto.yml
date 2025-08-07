@@ -37,18 +37,13 @@ website:
       - icon: facebook
         href: "https://facebook.com/kabcon2025"
   page-footer:
+      background: "#066b23" 
       left: |
-        <div style="background-color: #066b23; color: white; padding: 15px;">
-          © 2025 Kerala State Biodiversity Board & Kerala Agricultural University
-        </div>
+          <font size="4">© 2025 Kerala State Biodiversity Board & Kerala Agricultural University </font>
       center: |
-        <div style="background-color: #066b23; color: white; padding: 15px; text-align: center;">
-          Powered by <strong>STATOBERRY LLP</strong>
-        </div>
+           <font size="4">Powered by <strong>STATOBERRY LLP</strong> </font>
       right: |
-        <div style="background-color: #066b23; color: white; padding: 15px; text-align: right;">
-          <a href="mailto:info@kabcon2025.org" style="color: white; text-decoration: none;">Contact Us</a>
-        </div>
+           <font size="4"><a href="mailto:info@kabcon2025.org" style="color: white; text-decoration: none;">Contact Us</a> </font>
 
 format:
   html:
