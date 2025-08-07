@@ -271,12 +271,12 @@ This conference aims to contribute to key international goals including SDG 2 (Z
 
 ::: {.column width="100%" style="padding: 1rem;"}
 <div class="slider" style="border-radius: 10px; overflow: hidden; background: #000; max-height: 500px;">
-  <img src="www/image1.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/image2.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/image3.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/image4.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/image5.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/image6.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/image1.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/image2.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/image3.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/image4.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/image5.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/image6.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
 </div>
 :::
 
