@@ -18,6 +18,10 @@ website:
   image: banner.png
   navbar:
     logo: logo.png
+    background: light
+    foreground: dark
+    collapse: true
+    pinned: true
     left:
       - href: index.qmd
         text: Home
