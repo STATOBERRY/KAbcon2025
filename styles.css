@@ -130,36 +130,6 @@ body, .navbar, .hero-section, .hero-image img {
   filter: blur(5px) brightness(0.7);
 }
 
-/* Mobile Responsiveness */
-@media (max-width: 768px) {
-  .hero-details {
-    padding: 25px 20px;
-    margin: 0 10px;
-    margin-top: 20px;
-  }
-  
-  .hero-details blockquote {
-    font-size: 1.2rem;
-  }
-  
-  .hero-details .btn {
-    font-size: 1rem;
-    padding: 12px 25px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-details strong {
-    font-size: 1.1rem;
-  }
-  
-  .hero-details blockquote {
-    font-size: 1.1rem;
-  }
-}
-
-
-<style>
 .text-slider-box {
   width: 100%;
   overflow: hidden;
@@ -198,7 +168,6 @@ body, .navbar, .hero-section, .hero-image img {
   animation-play-state: paused;
   cursor: pointer;
 }
-</style>
 
 
 /* objectives container */
@@ -532,128 +501,3 @@ html, body {
 body {
   font-size: 16px;
 }
-
-@media (max-width: 1024px) {
-  body {
-    font-size: 15px;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-details {
-    padding: 20px;
-  }
-
-  .objective-box {
-    width: 45%;  /* Allow more flexible wrapping */
-  }
-
-  .theme-card {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-    line-height: 1.3;
-  }
-
-  .hero-details {
-    padding: 15px;
-    margin: 10px;
-  }
-
-  .objectives-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .objective-box {
-    width: 90%;  /* Stack vertically */
-  }
-
-  .themes-grid {
-    grid-template-columns: 1fr;  /* Stack cards vertically */
-  }
-
-  .participants-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .participants-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .participants-image img {
-    width: 100%;
-    height: auto;
-  }
-
-  .text-slider-box {
-    height: auto;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 480px) {
-  body {
-    font-size: 13px;
-  }
-
-  .hero-title {
-    font-size: 1.6rem;
-  }
-
-  .hero-details {
-    padding: 12px;
-  }
-
-  .hero-details blockquote {
-    font-size: 1rem;
-  }
-
-  .hero-details .btn {
-    font-size: 0.9rem;
-    padding: 10px 20px;
-  }
-
-  .text-slider-content {
-    font-size: 1rem;
-  }
-
-  .participant-card {
-    padding: 1rem;
-  }
-
-  .participant-title {
-    font-size: 1rem;
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
