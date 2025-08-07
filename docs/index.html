@@ -391,20 +391,91 @@ document.addEventListener('scroll', function () {
   color: #004d00;
 }
 </style>
-<div class="columns about-section">
-<div class="column" style="padding: 1rem; text-align:justify; font-family: 'Georgia', serif;">
-<section id="about" class="level2">
-<h2 class="anchored" data-anchor-id="about"><span class="text-black">About</span> <span class="text-green">The Kerala Agrobiodiversity Conference</span></h2>
-<p>The Kerala Agrobiodiversity Conference -2025 (KAbCon-2025), an international Conference on Community Agrobiodiversity Management in Kerala invites researchers, policymakers, farmers, indigenous leaders, development professionals, and sustainability advocates from around the world to engage in a collaborative dialogue on the integration of traditional wisdom and modern innovations for climate-resilient food systems in biodiversity hotspots.</p>
-<p>Jointly organized by the Kerala State Biodiversity Board (KSBB) and Kerala Agricultural University, College of Agriculture, Vellayani, this conference is part of the 70th anniversary celebrations of the College and KSBB’s 20-year experience in biodiversity conservation. It also commemorates the 80th anniversary of FAO and World Food Day 2025, and the Centenary Year of Prof.&nbsp;M. S. Swaminathan.</p>
-<p>This conference aims to contribute to key international goals including SDG 2 (Zero Hunger), SDG 13 (Climate Action), SDG 15 (Life on Land), and KMGBF Targets 4, 8, and 10.</p>
+<style>
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+    font-family: 'Georgia', serif;
+  }
+
+  .about-text,
+  .about-slider {
+    flex: 1 1 100%;
+  }
+
+  .about-text {
+    text-align: justify;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .text-black {
+    color: black;
+  }
+
+  .text-green {
+    color: green;
+  }
+
+  .slider {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 500px;
+    background: #000;
+  }
+
+  .slide-img {
+    width: 100%;
+    height: auto;
+    display: none;
+    object-fit: cover;
+  }
+
+  .slide-img.active {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .about-text,
+    .about-slider {
+      flex: 1 1 48%;
+    }
+  }
+</style>
+
+<section class="about-section">
+  <!-- Text Column -->
+  <div class="about-text">
+    <h2 class="anchored"><span class="text-black">About</span> <span class="text-green">The Kerala Agrobiodiversity Conference</span></h2>
+    <p>
+      The Kerala Agrobiodiversity Conference -2025 (KAbCon-2025), an international Conference on Community Agrobiodiversity Management in Kerala invites researchers, policymakers, farmers, indigenous leaders, development professionals, and sustainability advocates from around the world to engage in a collaborative dialogue on the integration of traditional wisdom and modern innovations for climate-resilient food systems in biodiversity hotspots.
+    </p>
+    <p>
+      Jointly organized by the Kerala State Biodiversity Board (KSBB) and Kerala Agricultural University, College of Agriculture, Vellayani, this conference is part of the 70th anniversary celebrations of the College and KSBB’s 20-year experience in biodiversity conservation. It also commemorates the 80th anniversary of FAO and World Food Day 2025, and the Centenary Year of Prof. M. S. Swaminathan.
+    </p>
+    <p>
+      This conference aims to contribute to key international goals including SDG 2 (Zero Hunger), SDG 13 (Climate Action), SDG 15 (Life on Land), and KMGBF Targets 4, 8, and 10.
+    </p>
+  </div>
+
+  <!-- Slider Column -->
+  <div class="about-slider">
+    <div class="slider" id="slider">
+      <img src="www/image1.webp" class="slide-img active">
+      <img src="www/image2.webp" class="slide-img">
+      <img src="www/image3.webp" class="slide-img">
+      <img src="www/image4.webp" class="slide-img">
+      <img src="www/image5.webp" class="slide-img">
+      <img src="www/image6.webp" class="slide-img">
+    </div>
+  </div>
 </section>
-</div><div class="column" style="padding: 1rem;">
-<div class="slider" style="border-radius: 10px; overflow: hidden; background: #000; max-height: 500px;">
-<p><img src="www/image1.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;"> <img src="www/image2.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;"> <img src="www/image3.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;"> <img src="www/image4.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;"> <img src="www/image5.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;"> <img src="www/image6.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;"></p>
-</div>
-</div>
-</div>
 <div style="padding-left: 30px; font-family: 'Georgia', serif; width: 100%;">
   <h2 id="objectives" style="margin-bottom: 1rem;" class="anchored">
     <span style="color: black;">The</span> <span style="color: green;">Conference Objectives</span>
@@ -916,13 +987,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 
-document.addEventListener("DOMContentLoaded", () => {
-
   const slides = document.querySelectorAll('.slide-img');
 
   let currentSlide = 0;
-
-  const totalSlides = slides.length;
 
 
 
@@ -930,7 +997,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     slides.forEach((slide, i) => {
 
-      slide.style.display = i === index ? 'block' : 'none';
+      slide.classList.toggle('active', i === index);
 
     });
 
@@ -938,21 +1005,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  function nextSlide() {
+  setInterval(() => {
 
-    currentSlide = (currentSlide + 1) % totalSlides;
+    currentSlide = (currentSlide + 1) % slides.length;
 
     showSlide(currentSlide);
 
-  }
-
-
-
-  showSlide(currentSlide);
-
-  setInterval(nextSlide, 3000); // Change slide every 3 seconds
-
-});
+  }, 3000); // change image every 3 seconds
 
 </script>
 

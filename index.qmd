@@ -256,31 +256,93 @@ document.addEventListener('scroll', function () {
 ```
 
 
+```{=html}
+<style>
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    gap: 1rem;
+    font-family: 'Georgia', serif;
+  }
 
-::: {.columns .about-section}
+  .about-text,
+  .about-slider {
+    flex: 1 1 100%;
+  }
 
-::: {.column width="100%" style="padding: 1rem; text-align:justify; font-family: 'Georgia', serif;"}
-## <span class="text-black">About</span> <span class="text-green">The Kerala Agrobiodiversity Conference</span> {#about}
+  .about-text {
+    text-align: justify;
+  }
 
-The Kerala Agrobiodiversity Conference -2025 (KAbCon-2025), an international Conference on Community Agrobiodiversity Management in Kerala invites researchers, policymakers, farmers, indigenous leaders, development professionals, and sustainability advocates from around the world to engage in a collaborative dialogue on the integration of traditional wisdom and modern innovations for climate-resilient food systems in biodiversity hotspots.
+  .about-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+  }
 
-Jointly organized by the Kerala State Biodiversity Board (KSBB) and Kerala Agricultural University, College of Agriculture, Vellayani, this conference is part of the 70th anniversary celebrations of the College and KSBB’s 20-year experience in biodiversity conservation. It also commemorates the 80th anniversary of FAO and World Food Day 2025, and the Centenary Year of Prof. M. S. Swaminathan.
+  .text-black {
+    color: black;
+  }
 
-This conference aims to contribute to key international goals including SDG 2 (Zero Hunger), SDG 13 (Climate Action), SDG 15 (Life on Land), and KMGBF Targets 4, 8, and 10.
-:::
+  .text-green {
+    color: green;
+  }
 
-::: {.column width="100%" style="padding: 1rem;"}
-<div class="slider" style="border-radius: 10px; overflow: hidden; background: #000; max-height: 500px;">
-  <img src="www/image1.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/image2.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/image3.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/image4.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/image5.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/image6.webp" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-</div>
-:::
+  .slider {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    max-height: 500px;
+    background: #000;
+  }
 
-:::
+  .slide-img {
+    width: 100%;
+    height: auto;
+    display: none;
+    object-fit: cover;
+  }
+
+  .slide-img.active {
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .about-text,
+    .about-slider {
+      flex: 1 1 48%;
+    }
+  }
+</style>
+
+<section class="about-section">
+  <!-- Text Column -->
+  <div class="about-text">
+    <h2><span class="text-black">About</span> <span class="text-green">The Kerala Agrobiodiversity Conference</span></h2>
+    <p>
+      The Kerala Agrobiodiversity Conference -2025 (KAbCon-2025), an international Conference on Community Agrobiodiversity Management in Kerala invites researchers, policymakers, farmers, indigenous leaders, development professionals, and sustainability advocates from around the world to engage in a collaborative dialogue on the integration of traditional wisdom and modern innovations for climate-resilient food systems in biodiversity hotspots.
+    </p>
+    <p>
+      Jointly organized by the Kerala State Biodiversity Board (KSBB) and Kerala Agricultural University, College of Agriculture, Vellayani, this conference is part of the 70th anniversary celebrations of the College and KSBB’s 20-year experience in biodiversity conservation. It also commemorates the 80th anniversary of FAO and World Food Day 2025, and the Centenary Year of Prof. M. S. Swaminathan.
+    </p>
+    <p>
+      This conference aims to contribute to key international goals including SDG 2 (Zero Hunger), SDG 13 (Climate Action), SDG 15 (Life on Land), and KMGBF Targets 4, 8, and 10.
+    </p>
+  </div>
+
+  <!-- Slider Column -->
+  <div class="about-slider">
+    <div class="slider" id="slider">
+      <img src="www/image1.webp" class="slide-img active" />
+      <img src="www/image2.webp" class="slide-img" />
+      <img src="www/image3.webp" class="slide-img" />
+      <img src="www/image4.webp" class="slide-img" />
+      <img src="www/image5.webp" class="slide-img" />
+      <img src="www/image6.webp" class="slide-img" />
+    </div>
+  </div>
+</section>
+```
 
 ```{=html}
 <div style="padding-left: 30px; font-family: 'Georgia', serif; width: 100%;">

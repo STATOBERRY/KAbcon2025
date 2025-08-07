@@ -61,25 +61,19 @@ document.addEventListener('DOMContentLoaded', function() {
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", () => {
   const slides = document.querySelectorAll('.slide-img');
   let currentSlide = 0;
-  const totalSlides = slides.length;
 
   function showSlide(index) {
     slides.forEach((slide, i) => {
-      slide.style.display = i === index ? 'block' : 'none';
+      slide.classList.toggle('active', i === index);
     });
   }
 
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
+  setInterval(() => {
+    currentSlide = (currentSlide + 1) % slides.length;
     showSlide(currentSlide);
-  }
-
-  showSlide(currentSlide);
-  setInterval(nextSlide, 3000); // Change slide every 3 seconds
-});
+  }, 3000); // change image every 3 seconds
 </script>
 
 
