@@ -1,19 +1,80 @@
----
-title: "Tours"
----
+```{=html}
+<section class="tour-packages-section">
+  <h2 style="text-align:center; color:#4a148c;">Optional Guided Tour Packages – 18th October 2025</h2>
 
-# Optional Guided Tour Packages (18th October 2025)
+  <div class="tour-grid">
+    <!-- Card 1 -->
+    <div class="tour-card">
+      <img src="www/padma.png" alt="Cultural Tour">
+      <h3>Cultural Heritage and Traditions</h3>
+      <p>Explore Thiruvananthapuram City including Sree Padmanabhaswamy Temple.</p>
+    </div>
 
-The organizing committee has curated unique guided tours for participants:
+    <!-- Card 2 -->
+    <div class="tour-card">
+      <img src="www/poovar.png" alt="Biodiversity Tour">
+      <h3>Biodiversity Experience</h3>
+      <p>Eco visit to Poovar Estuary and surrounding biodiversity hotspots.</p>
+    </div>
 
-1. **Cultural Heritage and Traditions Tour – Thiruvananthapuram City**  
-   Includes Sree Padmanabhaswamy Temple and heritage sites.
+    <!-- Card 3 -->
+    <div class="tour-card">
+      <img src="www/JNTBGRI.png" alt="Botanical Tour">
+      <h3>Botanical & Biodiversity Exploration</h3>
+      <p>Visit to JNTBGRI and explore endemic flora and research collections.</p>
+    </div>
 
-2. **Biodiversity Experience Package – Thiruvananthapuram**  
-   Includes Poovar Estuary Eco Visit and local biodiversity hotspots.
+    <!-- Card 4 -->
+    <div class="tour-card">
+      <img src="www/farmer.png" alt="Agrobiodiversity Tour">
+      <h3>Agrobiodiversity Immersion</h3>
+      <p>Field visit to custodian farmers preserving indigenous varieties.</p>
+    </div>
+  </div>
+</section>
 
-3. **Botanical and Biodiversity Exploration Package – Thiruvananthapuram**  
-   Includes visits to JNTBGRI and local botanical gardens.
+<style>
+.tour-packages-section {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', sans-serif;
+}
 
-4. **Agrobiodiversity Immersion Experience**  
-   Field visits to custodian farmers’ fields showcasing crop diversity and community practices.
+.tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.tour-card {
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.tour-card:hover {
+  transform: translateY(-5px);
+}
+
+.tour-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.tour-card h3 {
+  font-size: 1.2rem;
+  color: #4a148c;
+  margin: 1rem;
+}
+
+.tour-card p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0 1rem 1rem 1rem;
+}
+</style>
+```

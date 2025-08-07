@@ -1,33 +1,265 @@
 ---
+title: ""
 format: html
----  
+editor: visual
+# comments:
+#   utterances:
+#     repo: STATOBERRY/The-RAISINS-Website
+---
 
-::::::: hero-section
-::: hero-image
-<img src="www/ban.png" style="width:100%; height:auto;"/>
-:::
-::::: hero-content
-::: hero-details
-**Date:** October 16–18, 2025\
-**Venue:** College of Agriculture, Vellayani, Thiruvananthapuram, Kerala, India
+```{=html}
+<!-- Hero Section -->
+<div class="hero-section">
+  <!-- Background Image -->
+  <div class="hero-image">
+    <img src="www/banner.webp" alt="Banner Image">
+  </div>
 
-> *An international conference on Community Agrobiodiversity Management in Kerala.*
+  <!-- Bright Yellow Responsive Title -->
+  <div class="hero-title-overlay scroll-fade">
+    Kerala Agrobiodiversity Conference 2025
+  </div>
 
-[Register Now](https://registration-link.com){.btn .btn-primary .btn-lg}
-:::
-:::::
-:::::::
+  <!-- Event Details Box -->
+  <div class="hero-content">
+    <div class="hero-details">
+      <strong>Date: October 16–18, 2025<br>
+      Venue: College of Agriculture, Vellayani, Thiruvananthapuram, Kerala, India</strong>
+      <blockquote>
+        An international conference on Community Agrobiodiversity Management in Kerala.
+      </blockquote>
+      <br>
+      <a href="https://registration-link.com" class="btn">Register Now</a>
+    </div>
+  </div>
+</div>
 
-::: {.marquee-container}
-::: {.marquee-content}
-🌾 Kerala Agrobiodiversity Conference 2025 • October 16–18 • College of Agriculture, Vellayani • Register Now! 🌱 
-:::
-:::
+<style>
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+}
+
+/* Background Image */
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Bright Yellow Responsive Title */
+.hero-title-overlay {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 900;
+  color: #ffff33; /* bright yellow */
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.85); /* shadow for contrast */
+  line-height: 1.2;
+  padding: 0 15px;
+  max-width: 90%;
+  word-break: break-word;
+  transition: opacity 0.5s ease;
+}
+
+/* Fade on Scroll */
+.scroll-fade {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+body.scrolled .scroll-fade {
+  opacity: 0;
+}
+
+/* Event Details Box */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin: 0 20px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.hero-details {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px 30px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-details.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-details strong {
+  font-size: 1.4rem;
+  color: #ffd700;
+  display: block;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.hero-details blockquote {
+  font-size: 1.3rem;
+  color: #e0f7fa;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Register Button */
+.hero-details .btn {
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-details .btn:hover {
+  background: #ffd700;
+  color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-details {
+    padding: 25px 20px;
+    margin-top: 20px;
+  }
+
+  .hero-details blockquote {
+    font-size: 1.2rem;
+  }
+
+  .hero-details .btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-details strong {
+    font-size: 1.1rem;
+  }
+
+  .hero-details blockquote {
+    font-size: 1.1rem;
+  }
+
+  .hero-details .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+</style>
+
+<!-- Scroll Fade Script -->
+<script>
+document.addEventListener('scroll', function () {
+  if (window.scrollY > 10) {
+    document.body.classList.add('scrolled');
+  } else {
+    document.body.classList.remove('scrolled');
+  }
+});
+</script>
+```
+
+```{=html}
+<!-- Marquee Section -->
+<div class="marquee-container">
+  <div class="marquee-text">
+    🌾 Kerala Agrobiodiversity Conference 2025 • October 16–18 • College of Agriculture, Vellayani • <a href="https://registration-link.com" target="_blank">Register Now!</a> 🌱
+  </div>
+</div>
+
+<style>
+.marquee-container {
+  background-color: #e6f5e6; /* light green */
+  border: 3px solid #2b9348; /* dark green border */
+  color: #1b4332;
+  font-size: 1.2rem;
+  padding: 12px 0;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 18s linear infinite;
+  padding-left: 100%;
+}
+
+.marquee-container:hover .marquee-text {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-text a {
+  color: #006400; /* dark green link */
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.marquee-text a:hover {
+  color: #004d00;
+}
+</style>
+```
+
 
 
 ::: {.columns .about-section}
 
-::: {.column width="100%" style="padding: 1rem; font-family: 'Georgia', serif;"}
+::: {.column width="100%" style="padding: 1rem; text-align:justify; font-family: 'Georgia', serif;"}
 ## <span class="text-black">About</span> <span class="text-green">The Kerala Agrobiodiversity Conference</span> {#about}
 
 The Kerala Agrobiodiversity Conference -2025 (KAbCon-2025), an international Conference on Community Agrobiodiversity Management in Kerala invites researchers, policymakers, farmers, indigenous leaders, development professionals, and sustainability advocates from around the world to engage in a collaborative dialogue on the integration of traditional wisdom and modern innovations for climate-resilient food systems in biodiversity hotspots.
@@ -39,158 +271,430 @@ This conference aims to contribute to key international goals including SDG 2 (Z
 
 ::: {.column width="100%" style="padding: 1rem;"}
 <div class="slider" style="border-radius: 10px; overflow: hidden; background: #000; max-height: 500px;">
-  <img src="www/img1.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/img2.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/img3.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/img4.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/img5.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
-  <img src="www/img6.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/image1.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/image2.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/image3.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/image4.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/image5.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
+  <img src="www/image6.png" class="slide-img" style="width: 100%; height: auto; object-fit: cover;">
 </div>
 :::
 
 :::
 
+```{=html}
+<div style="padding-left: 30px; font-family: 'Georgia', serif; width: 100%;">
+  <h2 id="objectives" style="margin-bottom: 1rem;">
+    <span style="color: black;">The</span> <span style="color: green;">Conference Objectives</span>
+  </h2>
+</div>
 
-::: {.column width="100%" style="padding-left: 30px; font-family: 'Georgia', serif;"}
-## [The]{.text-black} [Conference Objectives]{.text-green} {#objectives}  
-:::
-<div class="objectives-section">
-  <div class="background-image"></div> <!-- Blurred background -->
+<div style="position: relative; overflow: hidden; padding: 2rem;">
+  <div style="
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+    position: relative;
+    z-index: 2;
+  ">
 
-:::::: objectives-container
-::: objective-box
-<i class="fas fa-exchange-alt icon"></i>
-<strong>Promote Knowledge Exchange</strong>  
-Promote knowledge exchange (both traditional and modern) in agrobiodiversity conservation and mainstreaming, focusing on alternate seed systems, regenerative agriculture, and food production practices.
-:::
+    <!-- Box 1 -->
+    <div style="
+      background: linear-gradient(135deg, #ffffff, #f9f9f9);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 30%;
+      min-width: 280px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      font-family: 'Lato', 'Helvetica', sans-serif;
+      transition: transform 0.3s ease, background 0.5s ease;
+    " onmouseover="this.style.background='linear-gradient(135deg, #d0f0c0, #a0e7e5)'; this.style.transform='scale(1.03)';"
+       onmouseout="this.style.background='linear-gradient(135deg, #ffffff, #f9f9f9)'; this.style.transform='scale(1)';">
+      <i class="fas fa-exchange-alt" style="font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+      <strong style="display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">Promote Knowledge Exchange</strong>
+      Promote knowledge exchange (both traditional and modern) in agrobiodiversity conservation and mainstreaming, focusing on alternate seed systems, regenerative agriculture, and food production practices.
+    </div>
 
-::: objective-box
-<i class="fas fa-seedling icon"></i>
-<strong>Showcase Farmer Innovations</strong>  
-Showcase innovations of the custodian farmers of Kerala in crop genetic diversity conservation, enhancement, and sustainable management that strengthen climate adaptation, resilience and food and nutrition security.
-:::
+    <!-- Box 2 -->
+    <div style="
+      background: linear-gradient(135deg, #ffffff, #f9f9f9);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 30%;
+      min-width: 280px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      font-family: 'Lato', 'Helvetica', sans-serif;
+      transition: transform 0.3s ease, background 0.5s ease;
+    " onmouseover="this.style.background='linear-gradient(135deg, #ffe29f, #ffa07a)'; this.style.transform='scale(1.03)';"
+       onmouseout="this.style.background='linear-gradient(135deg, #ffffff, #f9f9f9)'; this.style.transform='scale(1)';">
+      <i class="fas fa-seedling" style="font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+      <strong style="display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">Showcase Farmer Innovations</strong>
+      Showcase innovations of the custodian farmers of Kerala in crop genetic diversity conservation, enhancement, and sustainable management that strengthen climate adaptation, resilience and food and nutrition security.
+    </div>
 
-::: objective-box
-<i class="fas fa-users icon"></i>
-<strong>Empower Local Institutions</strong>  
-Empower local governance institutions and community biodiversity management groups to localise global efforts aligned with the UN Sustainable Development Goals (SDGs) and the Kunming-Montreal Global Biodiversity Framework (KMG).
-:::
-::::::
+    <!-- Box 3 -->
+    <div style="
+      background: linear-gradient(135deg, #ffffff, #f9f9f9);
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 1rem;
+      width: 30%;
+      min-width: 280px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      text-align: left;
+      font-family: 'Lato', 'Helvetica', sans-serif;
+      transition: transform 0.3s ease, background 0.5s ease;
+    " onmouseover="this.style.background='linear-gradient(135deg, #c3cfe2, #a18cd1)'; this.style.transform='scale(1.03)';"
+       onmouseout="this.style.background='linear-gradient(135deg, #ffffff, #f9f9f9)'; this.style.transform='scale(1)';">
+      <i class="fas fa-users" style="font-size: 1.5rem; margin-bottom: 0.5rem;"></i>
+      <strong style="display: block; margin-bottom: 0.5rem; font-size: 1.1rem;">Empower Local Institutions</strong>
+      Empower local governance institutions and community biodiversity management groups to localise global efforts aligned with the UN Sustainable Development Goals (SDGs) and the Kunming-Montreal Global Biodiversity Framework (KMG).
+    </div>
 
+  </div>
+</div>
+```
+
+```{=html}
+<div style="padding-left: 30px; font-family: 'Georgia', serif; width: 100%;">
+  <h2 id="themes" style="margin-bottom: 1rem;">Key Themes</h2>
+</div>
+
+<div style="
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding: 0 2rem;
+">
+
+  <!-- Theme 1 -->
+  <div style="
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Lato', 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.15)';"
+     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 6px rgba(0, 0, 0, 0.1)';">
+    <i class="fas fa-seedling" style="font-size: 2rem; color: #0077cc; margin-bottom: 0.8rem;"></i>
+    <div style="font-weight: bold; font-size: 1rem;">Agrobiodiversity Conservation and Community Seed Systems</div>
+  </div>
+
+  <!-- Theme 2 -->
+  <div style="
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Lato', 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.15)';"
+     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 6px rgba(0, 0, 0, 0.1)';">
+    <i class="fas fa-tractor" style="font-size: 2rem; color: #0077cc; margin-bottom: 0.8rem;"></i>
+    <div style="font-weight: bold; font-size: 1rem;">Agroecological Transitions and Soil Health</div>
+  </div>
+
+  <!-- Theme 3 -->
+  <div style="
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Lato', 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.15)';"
+     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 6px rgba(0, 0, 0, 0.1)';">
+    <i class="fas fa-globe" style="font-size: 2rem; color: #0077cc; margin-bottom: 0.8rem;"></i>
+    <div style="font-weight: bold; font-size: 1rem;">Climate Resilience and Ecosystem Restoration in Agriculture</div>
+  </div>
+
+  <!-- Theme 4 -->
+  <div style="
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Lato', 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.15)';"
+     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 6px rgba(0, 0, 0, 0.1)';">
+    <i class="fas fa-landmark" style="font-size: 2rem; color: #0077cc; margin-bottom: 0.8rem;"></i>
+    <div style="font-weight: bold; font-size: 1rem;">Governance, Policy, and Indigenous Knowledge Systems</div>
+  </div>
+
+  <!-- Theme 5 -->
+  <div style="
+    background: #ffffff;
+    border: 1px solid #d0d0d0;
+    border-radius: 10px;
+    padding: 1.2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Lato', 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  " onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.15)';"
+     onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 6px rgba(0, 0, 0, 0.1)';">
+    <i class="fas fa-users" style="font-size: 2rem; color: #0077cc; margin-bottom: 0.8rem;"></i>
+    <div style="font-weight: bold; font-size: 1rem;">Equity, Youth, and Inclusion in Agrobiodiversity</div>
+  </div>
+
+</div>
+```
+
+```{=html}
+<div style="padding-left: 30px; width: 100%;">
+  <h2 id="themes" style="font-family: Georgia, serif;">Expected Participants</h2>
+</div>
+
+<div style="
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 0 1rem;
+">
+
+  <!-- Image & Button -->
+  <div style="flex: 1 1 350px; text-align: center;">
+    <img src="www/college.png" alt="Event Location" style="
+      width: 100%;
+      height: auto;
+      cursor: pointer;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    ">
+    <a href="location.html" style="
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background-color: #2E7D32;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+      transition: background-color 0.3s ease;
+    " onmouseover="this.style.backgroundColor='#1B5E20'" onmouseout="this.style.backgroundColor='#2E7D32'">
+      Event Location
+    </a>
+  </div>
+
+  <!-- Participant Cards Grid -->
+  <div style="
+    flex: 2 1 500px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  ">
+
+    <!-- Card 1 -->
+    <div style="
+      background: #ffffff;
+      border: 1px solid #d0d0d0;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      font-family: 'Lato', 'Arial', sans-serif;
+    " onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 6px 14px rgba(0, 0, 0, 0.12)';"
+       onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.08)';">
+      <i class="fas fa-seedling" style="font-size: 2.2rem; color: #0077cc; margin-bottom: 0.75rem;"></i>
+      <div style="font-weight: 700; font-size: 1.05rem; color: #2e7d32; margin-bottom: 0.4rem;">Renowned experts</div>
+      <div style="font-size: 0.95rem; color: #444; line-height: 1.5;">in Agrobiodiversity, Sustainable Agriculture, and Food & Nutrition</div>
+    </div>
+
+    <!-- Card 2 -->
+    <div style="background: #ffffff; border: 1px solid #d0d0d0; border-radius: 12px; padding: 1.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); text-align: center; font-family: 'Lato', 'Arial', sans-serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;"
+    onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 6px 14px rgba(0, 0, 0, 0.12)';"
+    onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.08)';">
+      <i class="fas fa-flask" style="font-size: 2.2rem; color: #0077cc; margin-bottom: 0.75rem;"></i>
+      <div style="font-weight: 700; font-size: 1.05rem; color: #2e7d32; margin-bottom: 0.4rem;">Scientists and Researchers</div>
+      <div style="font-size: 0.95rem; color: #444; line-height: 1.5;">International and national experts</div>
+    </div>
+
+    <!-- Card 3 -->
+<div style="background: #ffffff; border: 1px solid #d0d0d0; border-radius: 12px; padding: 1.5rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); text-align: center; font-family: 'Lato', 'Arial', sans-serif;
+transition: transform 0.3s ease, box-shadow 0.3s ease;"
+onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 6px 14px rgba(0, 0, 0, 0.12)';"
+onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.08)';">
+  <i class="fas fa-balance-scale" style="font-size: 2.2rem; color: #0077cc; margin-bottom: 0.75rem;"></i>
+  <div style="font-weight: 700; font-size: 1.05rem; color: #2e7d32; margin-bottom: 0.4rem;">Policymakers</div>
+  <div style="font-size: 0.95rem; color: #444; line-height: 1.5;">and biodiversity experts</div>
+</div>
+
+<!-- Card 4 -->
+<div style="background: #ffffff; border: 1px solid #d0d0d0; border-radius: 12px; padding: 1.5rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); text-align: center; font-family: 'Lato', 'Arial', sans-serif;
+transition: transform 0.3s ease, box-shadow 0.3s ease;"
+onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 6px 14px rgba(0, 0, 0, 0.12)';"
+onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.08)';">
+  <i class="fas fa-university" style="font-size: 2.2rem; color: #0077cc; margin-bottom: 0.75rem;"></i>
+  <div style="font-weight: 700; font-size: 1.05rem; color: #2e7d32; margin-bottom: 0.4rem;">Students and Faculty</div>
+  <div style="font-size: 0.95rem; color: #444; line-height: 1.5;">from agricultural and environmental sciences</div>
+</div>
+
+<!-- Card 5 -->
+<div style="background: #ffffff; border: 1px solid #d0d0d0; border-radius: 12px; padding: 1.5rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); text-align: center; font-family: 'Lato', 'Arial', sans-serif;
+transition: transform 0.3s ease, box-shadow 0.3s ease;"
+onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 6px 14px rgba(0, 0, 0, 0.12)';"
+onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.08)';">
+  <i class="fas fa-users" style="font-size: 2.2rem; color: #0077cc; margin-bottom: 0.75rem;"></i>
+  <div style="font-weight: 700; font-size: 1.05rem; color: #2e7d32; margin-bottom: 0.4rem;">Private Sector & NGOs</div>
+  <div style="font-size: 0.95rem; color: #444; line-height: 1.5;">and civil society representatives</div>
+</div>
+
+<!-- Card 6 -->
+<div style="background: #ffffff; border: 1px solid #d0d0d0; border-radius: 12px; padding: 1.5rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); text-align: center; font-family: 'Lato', 'Arial', sans-serif;
+transition: transform 0.3s ease, box-shadow 0.3s ease;"
+onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 6px 14px rgba(0, 0, 0, 0.12)';"
+onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.08)';">
+  <i class="fas fa-leaf" style="font-size: 2.2rem; color: #0077cc; margin-bottom: 0.75rem;"></i>
+  <div style="font-weight: 700; font-size: 1.05rem; color: #2e7d32; margin-bottom: 0.4rem;">Indigenous Knowledge Holders</div>
+  <div style="font-size: 0.95rem; color: #444; line-height: 1.5;">and farmers</div>
+</div>
+
+<!-- Card 7 -->
+<div style="background: #ffffff; border: 1px solid #d0d0d0; border-radius: 12px; padding: 1.5rem;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08); text-align: center; font-family: 'Lato', 'Arial', sans-serif;
+transition: transform 0.3s ease, box-shadow 0.3s ease;"
+onmouseover="this.style.transform='translateY(-6px)'; this.style.boxShadow='0 6px 14px rgba(0, 0, 0, 0.12)';"
+onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.08)';">
+  <i class="fas fa-globe" style="font-size: 2.2rem; color: #0077cc; margin-bottom: 0.75rem;"></i>
+  <div style="font-weight: 700; font-size: 1.05rem; color: #2e7d32; margin-bottom: 0.4rem;">FAO, UNEP, CBD</div>
+  <div style="font-size: 0.95rem; color: #444; line-height: 1.5;">and other global bodies</div>
 </div>
 
 
-::: {.column width="100%" style="padding-left: 30px; font-family: 'Georgia', serif;"}
-## Key Themes {#themes}  
-:::
+  </div>
+</div>
+```
 
-:::: {.themes-grid}
+```{=html}
+<section class="countdown-wrapper">
+  <div class="countdown-container">
+    <div class="countdown" id="countdown">
+      <div class="time-box">
+        <span id="days">0</span>
+        <small>Days</small>
+      </div>
+      <div class="time-box">
+        <span id="hours">0</span>
+        <small>Hours</small>
+      </div>
+      <div class="time-box">
+        <span id="minutes">0</span>
+        <small>Minutes</small>
+      </div>
+      <div class="time-box">
+        <span id="seconds">0</span>
+        <small>Seconds</small>
+      </div>
+    </div>
+    <p class="countdown-description">
+      The International Conference on Community Agrobiodiversity Management (KAbCon 2025) will take place from <strong>October 16–18, 2025</strong> at the College of Agriculture, Vellayani, Kerala, India. Stay tuned for an inspiring event bringing together farmers, researchers, and policymakers.
+    </p>
+  </div>
+</section>
 
-::: {.theme-card}
-<i class="fas fa-seedling icon"></i>
-<div class="theme-title">Agrobiodiversity Conservation and Community Seed Systems </div>
-:::
+<style>
+  .countdown-wrapper {
+    padding: 40px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    background: none;
+  }
 
-::: {.theme-card}
-<i class="fas fa-tractor icon"></i>
-<div class="theme-title">Agroecological Transitions and Soil Health</div>
-:::
+  .countdown-container {
+    text-align: center;
+    max-width: 900px;
+  }
 
-::: {.theme-card}
-<i class="fas fa-globe icon"></i>
-<div class="theme-title">Climate Resilience and Ecosystem Restoration in Agriculture</div>
-:::
+  .countdown-title {
+    font-size: 1.8rem;
+    color: #6f2c91;
+    margin-bottom: 20px;
+    border-bottom: 3px solid #6f2c91;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
 
-::: {.theme-card}
-<i class="fas fa-landmark icon"></i>
-<div class="theme-title">Governance, Policy, and Indigenous Knowledge Systems</div>
-:::
+  .countdown {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
 
-::: {.theme-card}
-<i class="fas fa-users icon"></i>
-<div class="theme-title">Equity, Youth, and Inclusion in Agrobiodiversity</div>
-:::
+  .time-box {
+    background: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    min-width: 100px;
+  }
 
-::::
+  .time-box span {
+    display: block;
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #20666b;
+  }
 
+  .time-box small {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #d84315;
+    margin-top: 5px;
+    display: block;
+  }
 
-##
+  .countdown-description {
+    font-size: 1.1rem;
+    color: #444;
+    line-height: 1.6;
+    margin-top: 10px;
+  }
 
-::: {.column width="100%" style="padding-left: 30px;"}
-## Expected Participants  
-:::
+  @media (max-width: 600px) {
+    .countdown {
+      flex-direction: column;
+      align-items: center;
+    }
 
-:::::: {.participants-container} 
-
-::: {.participants-image}
-<img src="www/college.png" alt="Event Location" style="width:100%; height:auto; cursor: pointer; border-radius: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-
-<a href="location.html" style="
-  display: inline-block;
-  margin-top: 15px;
-  padding: 10px 20px;
-  background-color: #2E7D32;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 1px 1px 5px rgba(0,0,0,0.2);
-  transition: background-color 0.3s ease;"
-  onmouseover="this.style.backgroundColor='#1B5E20'" 
-  onmouseout="this.style.backgroundColor='#2E7D32'">
-  Event Location
-</a>
-:::
-
-::: {.participants-grid}
-
-::: {.participant-card}
-<i class="fas fa-seedling icon"></i>
-<div class="participant-title">Renowned experts</div>
-<div class="participant-desc">in Agrobiodiversity, Sustainable Agriculture, and Food & Nutrition</div>
-:::
-
-::: {.participant-card}
-<i class="fas fa-flask icon"></i>
-<div class="participant-title">Scientists and Researchers</div>
-<div class="participant-desc">International and national experts</div>
-:::
-
-::: {.participant-card}
-<i class="fas fa-balance-scale icon"></i>
-<div class="participant-title">Policymakers</div>
-<div class="participant-desc">and biodiversity experts</div>
-:::
-
-::: {.participant-card}
-<i class="fas fa-university icon"></i>
-<div class="participant-title">Students and Faculty</div>
-<div class="participant-desc">from agricultural and environmental sciences</div>
-:::
-
-::: {.participant-card}
-<i class="fas fa-users icon"></i>
-<div class="participant-title">Private Sector & NGOs</div>
-<div class="participant-desc">and civil society representatives</div>
-:::
-
-::: {.participant-card}
-<i class="fas fa-leaf icon"></i>
-<div class="participant-title">Indigenous Knowledge Holders</div>
-<div class="participant-desc">and farmers</div>
-:::
-
-::: {.participant-card}
-<i class="fas fa-globe icon"></i>
-<div class="participant-title">FAO, UNEP, CBD</div>
-<div class="participant-desc">and other global bodies</div>
-:::
-
-:::
-
-::::::
-
+    .time-box {
+      margin-bottom: 15px;
+    }
+  }
+</style>
+```
 
 
 
