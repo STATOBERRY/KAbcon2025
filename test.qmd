@@ -1,0 +1,259 @@
+---
+title: ""
+format: html
+editor: visual
+# comments:
+#   utterances:
+#     repo: STATOBERRY/The-RAISINS-Website
+---
+```{=html}
+<!-- Hero Section -->
+<div class="hero-section">
+  <!-- Background Image -->
+  <div class="hero-image">
+    <img src="www/banner.webp" alt="Banner Image">
+  </div>
+
+  <!-- Bright Yellow Responsive Title -->
+  <div class="hero-title-overlay scroll-fade">
+    Kerala Agrobiodiversity Conference 2025
+  </div>
+
+  <!-- Event Details Box -->
+  <div class="hero-content">
+    <div class="hero-details show">
+      <strong>Date: October 16–18, 2025<br>
+      Venue: College of Agriculture, Vellayani, Thiruvananthapuram, Kerala, India</strong>
+      <blockquote>
+        An international conference on Community Agrobiodiversity Management in Kerala.
+      </blockquote>
+      <br>
+      <a href="https://registration-link.com" class="btn">Register Now</a>
+    </div>
+  </div>
+</div>
+
+<style>
+/* Hero Section */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin-left: calc(-50vw + 50%);
+  overflow: hidden;
+}
+
+/* Background Image */
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Bright Yellow Responsive Title */
+.hero-title-overlay {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  font-size: clamp(1.8rem, 4.5vw, 3rem);
+  font-weight: 900;
+  color: #ffff33; /* bright yellow */
+  text-align: center;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.85); /* shadow for contrast */
+  line-height: 1.2;
+  padding: 0 15px;
+  max-width: 90%;
+  word-break: break-word;
+  transition: opacity 0.5s ease;
+}
+
+/* Fade on Scroll */
+.scroll-fade {
+  opacity: 1;
+  transition: opacity 0.5s ease;
+}
+body.scrolled .scroll-fade {
+  opacity: 0;
+}
+
+/* Event Details Box */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin: 0 20px;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.hero-details {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 25px 30px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.hero-details.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-details strong {
+  font-size: 1.4rem;
+  color: #ffd700;
+  display: block;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.hero-details blockquote {
+  font-size: 1.3rem;
+  color: #e0f7fa;
+  margin: 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Register Button */
+.hero-details .btn {
+  font-size: 1.1rem;
+  padding: 12px 25px;
+  border-radius: 30px;
+  border: 2px solid #ffd700;
+  color: #ffd700;
+  background: transparent;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+}
+
+.hero-details .btn:hover {
+  background: #ffd700;
+  color: black;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .hero-details {
+    padding: 25px 20px;
+    margin-top: 20px;
+  }
+
+  .hero-details blockquote {
+    font-size: 1.2rem;
+  }
+
+  .hero-details .btn {
+    font-size: 1rem;
+    padding: 12px 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-details strong {
+    font-size: 1.1rem;
+  }
+
+  .hero-details blockquote {
+    font-size: 1.1rem;
+  }
+
+  .hero-details .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+</style>
+
+<!-- Scroll Fade Script -->
+<script>
+document.addEventListener('scroll', function () {
+  if (window.scrollY > 10) {
+    document.body.classList.add('scrolled');
+  } else {
+    document.body.classList.remove('scrolled');
+  }
+});
+</script>
+```
+
+
+
+
+
+```{=html}
+<!-- Marquee Section -->
+<div class="marquee-container">
+  <div class="marquee-text">
+    🌾 Kerala Agrobiodiversity Conference 2025 • October 16–18 • College of Agriculture, Vellayani • <a href="https://registration-link.com" target="_blank">Register Now!</a> 🌱
+  </div>
+</div>
+
+<style>
+.marquee-container {
+  background-color: #e6f5e6; /* light green */
+  border: 3px solid #2b9348; /* dark green border */
+  color: #1b4332;
+  font-size: 1.2rem;
+  padding: 12px 0;
+  overflow: hidden;
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+.marquee-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 18s linear infinite;
+  padding-left: 100%;
+}
+
+.marquee-container:hover .marquee-text {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.marquee-text a {
+  color: #006400; /* dark green link */
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.marquee-text a:hover {
+  color: #004d00;
+}
+</style>
+```

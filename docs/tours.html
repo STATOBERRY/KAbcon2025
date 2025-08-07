@@ -117,10 +117,19 @@ ul.task-list li input[type="checkbox"] {
     <a class="nav-link active" href="./tours.html" aria-current="page"> 
 <span class="menu-text">Tours</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./test.html"> 
+<span class="menu-text">test</span></a>
+  </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item compact">
-    <a class="nav-link" href="https://twitter.com/kabcon2025"> <i class="bi bi-twitter" role="img">
+    <a class="nav-link" href="https://instagram.com/kabcon2025"> <i class="bi bi-instagram" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://facebook.com/kabcon2025"> <i class="bi bi-facebook" role="img">
 </i> 
 <span class="menu-text"></span></a>
   </li>  
@@ -179,9 +188,7 @@ Field visits to custodian farmers’ fields showcasing crop diversity and commun
 
 </main> <!-- /main -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
 <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&amp;display=swap" rel="stylesheet">
-
 
 
 
@@ -196,241 +203,6 @@ document.addEventListener('scroll', function() {
 });
 </script>
 
-
-
-<script>
-
-document.addEventListener('DOMContentLoaded', function() {
-
-  const heroImage = document.querySelector('.hero-image');
-
-  const heroSection = document.querySelector('.hero-section');
-
-  const heroDetails = document.querySelector('.hero-details');
-
-  
-
-  if (heroImage && heroSection && heroDetails) {
-
-    window.addEventListener('scroll', function() {
-
-      const scrolled = window.pageYOffset;
-
-      const heroHeight = heroSection.offsetHeight;
-
-      const showDetailsThreshold = heroHeight * 0.15; // Show details at 15% scroll
-
-      const blurThreshold = heroHeight * 0.3; // Start blur at 30% scroll
-
-      
-
-      // Show/hide details box
-
-      if (scrolled > showDetailsThreshold) {
-
-        heroDetails.classList.add('show');
-
-      } else {
-
-        heroDetails.classList.remove('show');
-
-      }
-
-      
-
-      // Apply blur effect
-
-      if (scrolled > blurThreshold) {
-
-        const blurAmount = Math.min((scrolled - blurThreshold) / (heroHeight * 0.4), 1);
-
-        heroImage.style.filter = `blur(${blurAmount * 8}px) brightness(${1 - blurAmount * 0.4})`;
-
-      } else {
-
-        heroImage.style.filter = 'blur(0px) brightness(1)';
-
-      }
-
-    });
-
-  }
-
-});
-
-</script>
-
-
-
-<style>
-
-.text-slider-container {
-
-  overflow: hidden;
-
-  width: 100%;
-
-  background: #f0f0f0;
-
-}
-
-
-
-.text-slider {
-
-  display: inline-block;
-
-  white-space: nowrap;
-
-  animation: slideText 35s linear infinite;
-
-  font-size: 1.2rem; /* Adjust font size as needed */
-
-  padding: 10px;
-
-}
-
-
-
-@keyframes slideText {
-
-  0% {
-
-    transform: translateX(100%);
-
-  }
-
-  100% {
-
-    transform: translateX(-100%);
-
-  }
-
-}
-
-</style>
-
-
-
-<script>
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  const slides = document.querySelectorAll('.slide-img');
-
-  let currentSlide = 0;
-
-  const totalSlides = slides.length;
-
-
-
-  function showSlide(index) {
-
-    slides.forEach((slide, i) => {
-
-      slide.style.display = i === index ? 'block' : 'none';
-
-    });
-
-  }
-
-
-
-  function nextSlide() {
-
-    currentSlide = (currentSlide + 1) % totalSlides;
-
-    showSlide(currentSlide);
-
-  }
-
-
-
-  showSlide(currentSlide);
-
-  setInterval(nextSlide, 3000); // Change slide every 3 seconds
-
-});
-
-</script>
-
-
-
-
-
-<script>
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  const boxes = document.querySelectorAll('.objective-box');
-
-
-
-  const observer = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-
-        entry.target.classList.add('visible');
-
-        observer.unobserve(entry.target);
-
-      }
-
-    });
-
-  }, { threshold: 0.1 });
-
-
-
-  boxes.forEach(box => {
-
-    observer.observe(box);
-
-  });
-
-});
-
-</script>
-
-
-
-
-
-<script>
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  const boxes = document.querySelectorAll('.objective-box');
-
-
-
-  const observer = new IntersectionObserver(entries => {
-
-    entries.forEach(entry => {
-
-      if (entry.isIntersecting) {
-
-        entry.target.classList.add('visible');  // Show when in view
-
-      } else {
-
-        entry.target.classList.remove('visible');  // Hide when out of view
-
-      }
-
-    });
-
-  }, { threshold: 0.1 }); // Trigger when 10% of the box is visible
-
-
-
-  boxes.forEach(box => observer.observe(box));
-
-});
-
-
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const heroImage = document.querySelector('.hero-image');
@@ -547,13 +319,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   boxes.forEach(box => observer.observe(box));
 });
-
 </script>
-
-
-
-
-
 
 
 

@@ -31,6 +31,8 @@ website:
         text: Highlights
       - href: tours.qmd
         text: Tours
+      - href: test.qmd
+        text: test
     right:
       - icon: instagram
         href: "https://instagram.com/kabcon2025"

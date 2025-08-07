@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://kabcon2025.org/tours.html</loc>
+    <lastmod>2025-08-06T02:43:07.516Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kabcon2025.org/test.html</loc>
+    <lastmod>2025-08-07T02:48:24.609Z</lastmod>
+  </url>
+  <url>
     <loc>https://kabcon2025.org/index.html</loc>
-    <lastmod>2025-08-06T09:50:57.525Z</lastmod>
+    <lastmod>2025-08-06T12:08:08.115Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kabcon2025.org/about.html</loc>
+    <lastmod>2025-08-06T02:43:06.590Z</lastmod>
   </url>
   <url>
     <loc>https://kabcon2025.org/highlights.html</loc>
-    <lastmod>2025-08-04T07:13:32.596Z</lastmod>
+    <lastmod>2025-08-06T02:43:07.516Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kabcon2025.org/objectives.html</loc>
+    <lastmod>2025-08-06T02:43:07.516Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kabcon2025.org/themes.html</loc>
+    <lastmod>2025-08-06T02:43:07.516Z</lastmod>
   </url>
 </urlset>
