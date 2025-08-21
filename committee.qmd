@@ -1,0 +1,151 @@
+---
+title: " "
+format: html
+---
+```{=html}
+<style>
+.committee-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.member-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: 45%;       /* Two per row on desktop */
+  text-align: center;
+  padding: 1rem;
+  transition: transform 0.3s;
+}
+
+.member-card:hover {
+  transform: translateY(-5px);
+}
+
+.member-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.member-name {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-bottom: 0.3rem;
+}
+
+.member-designation {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 0.3rem;
+}
+
+.member-subject, .member-college {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 0.2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #4a148c;
+}
+
+/* Mobile Responsive: 1 card per row */
+@media (max-width: 768px) {
+  .member-card { width: 100%; }
+}
+</style>
+
+<section id="organising">
+  <h2 class="section-title">Organising Committee</h2>
+  <div class="committee-container">
+    <div class="member-card">
+      <img src="images/member1.jpg" alt="Dr. John Doe">
+      <div class="member-name">Dr. John Doe</div>
+      <div class="member-designation">Professor</div>
+      <div class="member-subject">Agronomy</div>
+      <div class="member-college">College of Agriculture, XYZ University</div>
+    </div>
+
+    <div class="member-card">
+      <img src="images/member2.jpg" alt="Dr. Jane Smith">
+      <div class="member-name">Dr. Jane Smith</div>
+      <div class="member-designation">Associate Professor</div>
+      <div class="member-subject">Plant Breeding</div>
+      <div class="member-college">ABC University</div>
+    </div>
+  </div>
+</section>
+
+<section id="programme">
+  <h2 class="section-title">Programme Committee</h2>
+  <div class="committee-container">
+    <div class="member-card">
+      <img src="images/member3.jpg" alt="Dr. Alice Brown">
+      <div class="member-name">Dr. Alice Brown</div>
+      <div class="member-designation">Senior Scientist</div>
+      <div class="member-subject">Soil Science</div>
+      <div class="member-college">DEF University</div>
+    </div>
+
+    <div class="member-card">
+      <img src="images/member4.jpg" alt="Dr. Robert Lee">
+      <div class="member-name">Dr. Robert Lee</div>
+      <div class="member-designation">Professor</div>
+      <div class="member-subject">Horticulture</div>
+      <div class="member-college">GHI University</div>
+    </div>
+  </div>
+</section>
+
+<section id="sponsorship">
+  <h2 class="section-title">Sponsorship Committee</h2>
+  <div class="committee-container">
+    <div class="member-card">
+      <img src="images/member5.jpg" alt="Dr. Emma White">
+      <div class="member-name">Dr. Emma White</div>
+      <div class="member-designation">Professor</div>
+      <div class="member-subject">Biotechnology</div>
+      <div class="member-college">JKL University</div>
+    </div>
+
+    <div class="member-card">
+      <img src="images/member6.jpg" alt="Dr. Mark Green">
+      <div class="member-name">Dr. Mark Green</div>
+      <div class="member-designation">Assistant Professor</div>
+      <div class="member-subject">Entomology</div>
+      <div class="member-college">MNO University</div>
+    </div>
+  </div>
+</section>
+
+<section id="technical">
+  <h2 class="section-title">Technical Committee</h2>
+  <div class="committee-container">
+    <div class="member-card">
+      <img src="images/member7.jpg" alt="Dr. Olivia King">
+      <div class="member-name">Dr. Olivia King</div>
+      <div class="member-designation">Scientist</div>
+      <div class="member-subject">Crop Protection</div>
+      <div class="member-college">PQR University</div>
+    </div>
+
+    <div class="member-card">
+      <img src="images/member8.jpg" alt="Dr. Liam Scott">
+      <div class="member-name">Dr. Liam Scott</div>
+      <div class="member-designation">Professor</div>
+      <div class="member-subject">Soil Science</div>
+      <div class="member-college">STU University</div>
+    </div>
+  </div>
+</section>
+```

@@ -27,32 +27,6 @@
       <h3>Agrobiodiversity Immersion</h3>
       <p>Field visit to custodian farmers preserving indigenous varieties.</p>
     </div>
-
-    <!-- Second Row Cards -->
-    <div class="tour-card">
-      <img src="www/backwaters.webp" alt="Backwaters Tour">
-      <h3>Kerala Backwaters Experience</h3>
-      <p>Boat ride through scenic backwaters and explore local villages.</p>
-    </div>
-
-    <div class="tour-card">
-      <img src="www/arts.webp" alt="Arts & Crafts Tour">
-      <h3>Traditional Arts & Crafts</h3>
-      <p>Hands-on workshop and visit to local artisans' studios.</p>
-    </div>
-
-    <div class="tour-card">
-      <img src="www/hillstation.webp" alt="Hill Station Tour">
-      <h3>Hill Station Retreat</h3>
-      <p>Excursion to Ponmudi hill station, trekking and nature exploration.</p>
-    </div>
-
-    <div class="tour-card">
-      <img src="www/wildlife.webp" alt="Wildlife Tour">
-      <h3>Wildlife & Nature Safari</h3>
-      <p>Guided safari at Neyyar Wildlife Sanctuary to observe endemic species.</p>
-    </div>
-  </div>
 </section>
 
 

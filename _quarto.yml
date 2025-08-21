@@ -35,6 +35,10 @@ website:
         text: Tours
       - text: "<span style='padding:6px 14px; background-color:#5e17eb; color:white; border-radius:6px;'>Register</span>"
         href: "https://registration-link.com"
+      - text: Committee
+        href: committee.qmd
+      - text: Speakers
+        href: speakers.qmd
     right:
       - icon: instagram
         href: "https://instagram.com/kabcon2025"

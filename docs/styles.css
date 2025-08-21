@@ -73,30 +73,42 @@ body {
   font-size: 16px;
 }
 
-/* Make Quarto page footer fixed */
+/* Make Quarto page footer taller */
 .q-footer {
-    position: fixed !important;  /* Fix it to viewport */
+    position: fixed !important;  
     bottom: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 15px 20px;
-    display: flex !important;          /* Keep left/center/right layout */
-    justify-content: space-between !important;
-    background-color: #066b23 !important; /* Ensure footer color */
+    background-color: #066b23 !important; 
     color: white !important;
+    display: flex !important;
+    flex-direction: column;        /* Stack items vertically */
+    align-items: center;           /* Center horizontally */
+    justify-content: center;
     flex-wrap: wrap;
+    padding: 50px 20px;            /* Increase vertical padding for height */
+    min-height: 200px;             /* Ensure minimum height */
 }
 
-/* Ensure links in footer stay white */
+/* Links styling */
 .q-footer a {
     color: white !important;
     text-decoration: none !important;
+    margin: 0 15px;
+    font-weight: 600;
 }
 
-/* Add padding at bottom of page so content doesn't overlap footer */
+/* Optional: spacing for multiple rows of links */
+.q-footer .footer-links {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* spacing between links */
+}
+
+/* Add space at bottom of page so content does not overlap footer */
 .q-body {
-    padding-bottom: 80px; /* Adjust if footer height changes */
+    padding-bottom: 220px; /* slightly larger than footer height */
 }
-
-
