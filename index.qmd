@@ -992,7 +992,7 @@ onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8p
   <div class="register-container">
     <!-- Tab Navigation -->
     <ul class="tab-nav">
-      <li class="tab-link active" data-tab="step1"><i class="fas fa-user-plus"></i> Step 1</li>
+      <li class="tab-link active" data-tab="Register"><i class="fas fa-user-plus"></i> Step 1</li>
       <li class="tab-link" data-tab="step2"><i class="fas fa-envelope"></i> Step 2</li>
       <li class="tab-link" data-tab="step3"><i class="fas fa-edit"></i> Step 3</li>
       <li class="tab-link" data-tab="step4"><i class="fas fa-credit-card"></i> Step 4</li>
@@ -1241,47 +1241,10 @@ document.querySelectorAll('.tab-link').forEach(tab => {
   font-size: 14px;
   border-top: 1px solid rgba(255,255,255,0.2);
 }
-
-/* Remove white gap before YAML footer */
-main.content {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-.footer-wrapper {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-footer.site-footer {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-/* 🔥 Remove the white strip above YAML footer */
-.page-columns,
-.page-layout,
-.content,
-main.content {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-  background: transparent !important;
-}
-
-/* Ensure custom footer sticks right above YAML footer */
-.footer-wrapper {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
-}
-
-/* Ensure YAML footer starts immediately after */
-footer.site-footer {
-  margin-top: 0 !important;
-  padding-top: 0 !important;
-}
-
-
 </style>
+
+
+
 ```
 
 

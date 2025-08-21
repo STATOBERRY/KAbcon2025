@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - College of Agriculture, Vellayani</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #f5f3f0 0%, #e8e2db 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0;
+        }
+
+        .form-section {
+            padding: 40px;
+            background: #f8f6f3;
+        }
+
+        .map-section {
+            position: relative;
+            min-height: 500px;
+            background: #e0e0e0;
+        }
+
+        .form-title {
+            color: #2c5530;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            font-weight: 600;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4a7c59;
+            box-shadow: 0 0 10px rgba(74, 124, 89, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+            font-family: inherit;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(44, 85, 48, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .map-container {
+            width: 100%;
+            height: 100%;
+            min-height: 500px;
+            position: relative;
+        }
+
+        .map-info {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            max-width: 250px;
+        }
+
+        .map-info h3 {
+            color: #2c5530;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .map-info p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-top: 8px;
+        }
+
+        .stars {
+            color: #ffa500;
+        }
+
+        .rating-text {
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            min-height: 500px;
+        }
+
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #c3e6cb;
+            display: none;
+        }
+        
+        .warning-message {
+            background: #fff3cd;
+            color: #856404;
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ffeaa7;
+            display: none;
+        }
+
+        .submissions-count {
+            text-align: center;
+            margin-top: 20px;
+            color: #666;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .form-section {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Contact Us</h1>
+            <p>College of Agriculture, Vellayani - Kerala Agricultural University</p>
+        </div>
+        
+        <div class="content">
+            <div class="form-section">
+                <h2 class="form-title">Get in Touch</h2>
+                
+                <div class="success-message" id="successMessage">
+                    Thank you! Your message has been submitted successfully.
+                </div>
+                
+                <form id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" required placeholder="Enter your message here..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+                
+                <div class="submissions-count" id="submissionCount">
+                    Total submissions: 0
+                </div>
+            </div>
+            
+            <div class="map-section">
+                <div class="map-info">
+                    <h3>College of Agriculture, Vellayani</h3>
+                    <p>Kerala Agricultural University<br>
+                    Vellayani, Thiruvananthapuram<br>
+                    Kerala 695522</p>
+                    <div class="rating">
+                        <span class="stars">★★★★☆</span>
+                        <span class="rating-text">4.2 (Reviews)</span>
+                    </div>
+                </div>
+                
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3944.3906766158324!2d76.99574631478426!3d8.432071993917194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b05bb693a3a9745%3A0x8c53a8e7e5c8c7a9!2sCollege%20of%20Agriculture%2C%20Vellayani!5e0!3m2!1sen!2sin!4v1629876543210!5m2!1sen!2sin"
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Google Apps Script Web App URL (you need to replace this with your actual URL)
+        const GOOGLE_SCRIPT_URL = 'https://docs.google.com/spreadsheets/d/1Bb4rrDWf0KqicVZlmmdM2RWoeFBruK0AcliwFlzbRG4/edit?gid=0#gid=0;
+        
+        // Array to store form submissions (backup in-memory storage)
+        let formSubmissions = [];
+        
+        // Form submission handler
+        document.getElementById('contactForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            // Show loading state
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            submitBtn.textContent = 'SENDING...';
+            submitBtn.disabled = true;
+            
+            // Get form data
+            const formData = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                message: document.getElementById('message').value,
+                timestamp: new Date().toLocaleString('en-IN', {
+                    timeZone: 'Asia/Kolkata',
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                }),
+                id: Date.now()
+            };
+            
+            try {
+                // Send to Google Sheets
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'cors',
+                    cache: 'no-cache',
+                    credentials: 'same-origin',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    redirect: 'follow',
+                    referrerPolicy: 'no-referrer',
+                    body: JSON.stringify(formData)
+                });
+                
+                const result = await response.json();
+                
+                if (result.status === 'success') {
+                    // Store in local array as backup
+                    formSubmissions.push(formData);
+                    
+                    // Show success message
+                    showMessage('Thank you! Your message has been submitted and saved to our database.', 'success');
+                    
+                    // Update submission count
+                    document.getElementById('submissionCount').textContent = 
+                        `Total submissions: ${formSubmissions.length}`;
+                    
+                    // Reset form
+                    this.reset();
+                    
+                    console.log('Successfully saved to Google Sheets:', formData);
+                } else {
+                    throw new Error(result.message || 'Failed to save data');
+                }
+                
+            } catch (error) {
+                console.error('Error saving to Google Sheets:', error);
+                
+                // Store locally as fallback
+                formSubmissions.push(formData);
+                
+                // Show error message but still confirm local storage
+                showMessage('Message submitted locally. Please try again later for cloud storage.', 'warning');
+                
+                // Update submission count
+                document.getElementById('submissionCount').textContent = 
+                    `Total submissions: ${formSubmissions.length}`;
+                
+                // Reset form
+                this.reset();
+            } finally {
+                // Reset button state
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }
+        });
+        
+        // Function to show messages
+        function showMessage(message, type = 'success') {
+            const successMessage = document.getElementById('successMessage');
+            successMessage.textContent = message;
+            successMessage.className = type === 'warning' ? 'warning-message' : 'success-message';
+            successMessage.style.display = 'block';
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                successMessage.style.display = 'none';
+            }, 5000);
+        }
+        
+        // Function to export local data
+        function exportSubmissions() {
+            return formSubmissions;
+        }
+        
+        // Function to clear local submissions
+        function clearSubmissions() {
+            formSubmissions = [];
+            document.getElementById('submissionCount').textContent = 'Total submissions: 0';
+            console.log('Local submissions cleared');
+        }
+        
+        // Function to manually sync with Google Sheets (if needed)
+        async function syncWithGoogleSheets() {
+            if (formSubmissions.length === 0) {
+                console.log('No local data to sync');
+                return;
+            }
+            
+            console.log('Syncing local data with Google Sheets...');
+            for (const submission of formSubmissions) {
+                try {
+                    const response = await fetch(GOOGLE_SCRIPT_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(submission)
+                    });
+                    const result = await response.json();
+                    if (result.status === 'success') {
+                        console.log('Synced:', submission.name);
+                    }
+                } catch (error) {
+                    console.error('Sync failed for:', submission.name, error);
+                }
+            }
+        }
+        
+        // Make functions available globally
+        window.exportSubmissions = exportSubmissions;
+        window.clearSubmissions = clearSubmissions;
+        window.syncWithGoogleSheets = syncWithGoogleSheets;
+        
+        // Add some visual feedback for form inputs
+        const inputs = document.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', function() {
+                this.parentNode.style.transform = 'scale(1.02)';
+                this.parentNode.style.transition = 'transform 0.2s ease';
+            });
+            
+            input.addEventListener('blur', function() {
+                this.parentNode.style.transform = 'scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
