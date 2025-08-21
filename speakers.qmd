@@ -1,60 +1,37 @@
 ```{=html}
 <section class="tour-packages-section">
-  <h2 style="text-align:center; color:#4a148c;">SPEAKERS</h2>
+  <h2 style="text-align:center; color:#4a148c;">Optional Guided Tour Packages – 18th October 2025</h2>
 
   <div class="tour-grid">
-    <!-- First Row Cards -->
+    <!-- Card 1 -->
     <div class="tour-card">
       <img src="www/padma.webp" alt="Cultural Tour">
       <h3>Cultural Heritage and Traditions</h3>
       <p>Explore Thiruvananthapuram City including Sree Padmanabhaswamy Temple.</p>
     </div>
 
+    <!-- Card 2 -->
     <div class="tour-card">
       <img src="www/poovar.webp" alt="Biodiversity Tour">
       <h3>Biodiversity Experience</h3>
       <p>Eco visit to Poovar Estuary and surrounding biodiversity hotspots.</p>
     </div>
 
+    <!-- Card 3 -->
     <div class="tour-card">
       <img src="www/JNTBGRI.webp" alt="Botanical Tour">
       <h3>Botanical & Biodiversity Exploration</h3>
       <p>Visit to JNTBGRI and explore endemic flora and research collections.</p>
     </div>
 
+    <!-- Card 4 -->
     <div class="tour-card">
       <img src="www/farmer.webp" alt="Agrobiodiversity Tour">
       <h3>Agrobiodiversity Immersion</h3>
       <p>Field visit to custodian farmers preserving indigenous varieties.</p>
     </div>
-
-    <!-- Second Row Cards -->
-    <div class="tour-card">
-      <img src="www/backwaters.webp" alt="Backwaters Tour">
-      <h3>Kerala Backwaters Experience</h3>
-      <p>Boat ride through scenic backwaters and explore local villages.</p>
-    </div>
-
-    <div class="tour-card">
-      <img src="www/arts.webp" alt="Arts & Crafts Tour">
-      <h3>Traditional Arts & Crafts</h3>
-      <p>Hands-on workshop and visit to local artisans' studios.</p>
-    </div>
-
-    <div class="tour-card">
-      <img src="www/hillstation.webp" alt="Hill Station Tour">
-      <h3>Hill Station Retreat</h3>
-      <p>Excursion to Ponmudi hill station, trekking and nature exploration.</p>
-    </div>
-
-    <div class="tour-card">
-      <img src="www/wildlife.webp" alt="Wildlife Tour">
-      <h3>Wildlife & Nature Safari</h3>
-      <p>Guided safari at Neyyar Wildlife Sanctuary to observe endemic species.</p>
-    </div>
   </div>
 </section>
-
 
 <style>
 .tour-packages-section {

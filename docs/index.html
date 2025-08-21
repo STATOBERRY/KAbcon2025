@@ -515,7 +515,7 @@ document.addEventListener('scroll', function () {
 <section class="about-section">
   <!-- Text Column -->
   <div class="about-text">
-    <h2 class="anchored"><span class="text-black">About</span> <span class="text-green">The Kerala Agrobiodiversity Conference</span></h2>
+    <h2 class="anchored"><span id="about" class="text-black">About</span> <span class="text-green">The Kerala Agrobiodiversity Conference</span></h2>
     <p>
       The Kerala Agrobiodiversity Conference -2025 (KAbCon-2025), an international Conference on Community Agrobiodiversity Management in Kerala invites researchers, policymakers, farmers, indigenous leaders, development professionals, and sustainability advocates from around the world to engage in a collaborative dialogue on the integration of traditional wisdom and modern innovations for climate-resilient food systems in biodiversity hotspots.
     </p>
@@ -928,13 +928,16 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.
     margin: 0;
     padding: 0;
   }
+
   .calendar-container {
     display: flex;
     justify-content: center;
     align-items: stretch;
     gap: 20px;
     padding: 30px;
+    flex-wrap: wrap; /* allows wrapping on small screens */
   }
+
   .event-details {
     flex: 2;
     background: #fff;
@@ -944,31 +947,41 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.
     min-height: 400px;
     display: flex;
     flex-direction: column;
+    max-width: 700px;
+    width: 100%;
   }
+
   .event-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     gap: 20px;
     flex: 1;
+    flex-wrap: wrap;
   }
+
   .event-text {
     flex: 2;
+    min-width: 200px;
   }
+
   .event-image {
     flex: 1;
     display: flex;
     justify-content: center;
     align-items: flex-start;
+    min-width: 150px;
   }
+
   .event-image img {
-  width: auto;              /* keep aspect ratio */
-  height: 350px;            /* increase height */
-  max-width: 100%;          /* prevent overflow */
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-  object-fit: stretch;      /* keeps full image visible */
-}
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    object-fit: contain;
+  }
+
   .calendar {
     flex: 1;
     background: #fff;
@@ -977,7 +990,10 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.
     overflow: hidden;
     display: flex;
     flex-direction: column;
+    max-width: 350px;
+    width: 100%;
   }
+
   .calendar-header {
     text-align: center;
     padding: 15px;
@@ -985,6 +1001,7 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.
     color: white;
     font-weight: bold;
   }
+
   .calendar-grid {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
@@ -993,84 +1010,132 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.
     gap: 5px;
     flex: 1;
   }
+
   .day-name {
     font-weight: bold;
     padding: 5px;
     background: #f0f0f0;
     border-radius: 5px;
   }
+
   .date {
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
   }
+
   .date:hover {
     background: #e0f7e9;
   }
+
   .event {
     background: #4CAF50;
     color: white;
   }
+
+  /* Responsive for screens <= 768px */
+  @media (max-width: 768px) {
+    .calendar-container {
+      flex-direction: column;
+      padding: 15px;
+      gap: 15px;
+    }
+
+    .event-content {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .event-image {
+      margin-top: 15px;
+    }
+
+    .calendar-grid {
+      grid-template-columns: repeat(7, 1fr);
+      gap: 3px;
+      padding: 5px;
+    }
+
+    .day-name, .date {
+      padding: 5px;
+      font-size: 0.8rem;
+    }
+  }
+
+  /* Very small screens <= 480px */
+  @media (max-width: 480px) {
+    .calendar-grid {
+      grid-template-columns: repeat(7, 1fr);
+      gap: 2px;
+    }
+
+    .event-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .day-name, .date {
+      font-size: 0.7rem;
+      padding: 3px;
+    }
+  }
 </style>
 
-
-
-  <div class="calendar-container">
-    <!-- Event details -->
-    <div class="event-details" id="eventDetails">
-      <div class="event-content">
-        <div class="event-text">
-          <h2 class="anchored">Seminar Important Dates</h2>
-          <p>Click on a highlighted date in the calendar to see details here.</p>
-        </div>
-        <div class="event-image">
-          <img id="eventImage" src="www/abs.jpg" alt="Event Image">
-        </div>
+<div class="calendar-container">
+  <!-- Event details -->
+  <div class="event-details" id="eventDetails">
+    <div class="event-content">
+      <div class="event-text">
+        <h2 class="anchored">Seminar Important Dates</h2>
+        <p>Click on a highlighted date in the calendar to see details here.</p>
       </div>
-    </div>
-
-    <!-- Calendar -->
-    <div class="calendar">
-      <div class="calendar-header">September 2025</div>
-      <div class="calendar-grid">
-        <div class="day-name">Mon</div>
-        <div class="day-name">Tue</div>
-        <div class="day-name">Wed</div>
-        <div class="day-name">Thu</div>
-        <div class="day-name">Fri</div>
-        <div class="day-name">Sat</div>
-        <div class="day-name">Sun</div>
-
-        <!-- Example static dates -->
-        <div></div><div>1</div><div>2</div><div>3</div>
-        <div class="date event" data-event="Abstract Submission Deadline: Sept 4" data-img="images/abstract.png">4</div>
-        <div>5</div><div>6</div>
-        <div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div>
-        <div>14</div><div>15</div>
-        <div class="date event" data-event="Full Paper Submission Deadline: Sept 16" data-img="www/abs.jpg">16</div>
-        <div>17</div><div>18</div><div>19</div><div>20</div>
-        <div>21</div><div>22</div><div>23</div><div>24</div>
-        <div class="date event" data-event="Registration Deadline: Sept 25" data-img="images/register.png">25</div>
-        <div>26</div><div>27</div>
-        <div>28</div><div>29</div><div>30</div>
+      <div class="event-image">
+        <img id="eventImage" src="www/abs.jpg" alt="Event Image">
       </div>
     </div>
   </div>
 
-  <script>
-    // Handle click on event dates
-    document.querySelectorAll(".date.event").forEach(date => {
-      date.addEventListener("click", function() {
-        document.querySelector(".event-text").innerHTML = `
-          <h2>Event Details</h2>
-          <p>${this.dataset.event}</p>
-        `;
-        document.getElementById("eventImage").src = this.dataset.img;
-      });
-    });
-  </script>
+  <!-- Calendar -->
+  <div class="calendar">
+    <div class="calendar-header">September 2025</div>
+    <div class="calendar-grid">
+      <div class="day-name">Mon</div>
+      <div class="day-name">Tue</div>
+      <div class="day-name">Wed</div>
+      <div class="day-name">Thu</div>
+      <div class="day-name">Fri</div>
+      <div class="day-name">Sat</div>
+      <div class="day-name">Sun</div>
 
+      <!-- Example static dates -->
+      <div></div><div>1</div><div>2</div><div>3</div>
+      <div class="date event" data-event="Abstract Submission Deadline: Sept 4" data-img="images/abstract.png">4</div>
+      <div>5</div><div>6</div>
+      <div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div>
+      <div>14</div><div>15</div>
+      <div class="date event" data-event="Full Paper Submission Deadline: Sept 16" data-img="www/abs.jpg">16</div>
+      <div>17</div><div>18</div><div>19</div><div>20</div>
+      <div>21</div><div>22</div><div>23</div><div>24</div>
+      <div class="date event" data-event="Registration Deadline: Sept 25" data-img="images/register.png">25</div>
+      <div>26</div><div>27</div>
+      <div>28</div><div>29</div><div>30</div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Handle click on event dates
+  document.querySelectorAll(".date.event").forEach(date => {
+    date.addEventListener("click", function() {
+      document.querySelector(".event-text").innerHTML = `
+        <h2>Event Details</h2>
+        <p>${this.dataset.event}</p>
+      `;
+      document.getElementById("eventImage").src = this.dataset.img;
+    });
+  });
+</script>
 <!-- ⭐ How to Register Section ⭐ -->
 <section class="register-section" id="register">
   <div class="section-title">How to Register</div>
@@ -1210,7 +1275,6 @@ document.querySelectorAll('.tab-link').forEach(tab => {
   });
 });
 </script>
-
 
 
 

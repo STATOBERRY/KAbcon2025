@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://kabcon2025.org/tours.html</loc>
-    <lastmod>2025-08-07T06:41:46.836Z</lastmod>
+    <lastmod>2025-08-21T10:36:24.677Z</lastmod>
   </url>
   <url>
     <loc>https://kabcon2025.org/test.html</loc>
@@ -10,10 +10,14 @@
   </url>
   <url>
     <loc>https://kabcon2025.org/index.html</loc>
-    <lastmod>2025-08-21T08:48:55.002Z</lastmod>
+    <lastmod>2025-08-21T10:47:48.238Z</lastmod>
   </url>
   <url>
     <loc>https://kabcon2025.org/highlights.html</loc>
     <lastmod>2025-08-09T06:10:09.506Z</lastmod>
+  </url>
+  <url>
+    <loc>https://kabcon2025.org/speakers.html</loc>
+    <lastmod>2025-08-21T10:08:46.298Z</lastmod>
   </url>
 </urlset>
