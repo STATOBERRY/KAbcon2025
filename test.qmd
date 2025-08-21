@@ -6,6 +6,7 @@ editor: visual
 #   utterances:
 #     repo: STATOBERRY/The-RAISINS-Website
 ---
+
 ```{=html}
 <!-- Hero Section -->
 <div class="hero-section">
@@ -199,10 +200,6 @@ document.addEventListener('scroll', function () {
 });
 </script>
 ```
-
-
-
-
 
 ```{=html}
 <!-- Marquee Section -->

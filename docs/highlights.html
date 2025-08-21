@@ -24,7 +24,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -39,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-65f68e5805eedf156d919e1153988996.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -108,10 +107,6 @@ ul.task-list li input[type="checkbox"] {
   <li class="nav-item">
     <a class="nav-link" href="./index.html#themes"> 
 <span class="menu-text">Themes</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link active" href="./highlights.html" aria-current="page"> 
-<span class="menu-text">Highlights</span></a>
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="./tours.html"> 
@@ -316,13 +311,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 
-document.addEventListener("DOMContentLoaded", () => {
-
   const slides = document.querySelectorAll('.slide-img');
 
   let currentSlide = 0;
-
-  const totalSlides = slides.length;
 
 
 
@@ -330,7 +321,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     slides.forEach((slide, i) => {
 
-      slide.style.display = i === index ? 'block' : 'none';
+      slide.classList.toggle('active', i === index);
 
     });
 
@@ -338,21 +329,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  function nextSlide() {
+  setInterval(() => {
 
-    currentSlide = (currentSlide + 1) % totalSlides;
+    currentSlide = (currentSlide + 1) % slides.length;
 
     showSlide(currentSlide);
 
-  }
-
-
-
-  showSlide(currentSlide);
-
-  setInterval(nextSlide, 3000); // Change slide every 3 seconds
-
-});
+  }, 3000); // change image every 3 seconds
 
 </script>
 
@@ -919,19 +902,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<div style="background-color: #066b23; color: white; padding: 15px;">
-<p>© 2025 Kerala State Biodiversity Board &amp; Kerala Agricultural University</p>
-</div>
+<p><font size="4">© 2025 Kerala State Biodiversity Board &amp; Kerala Agricultural University </font></p>
 </div>   
     <div class="nav-footer-center">
-<div style="background-color: #066b23; color: white; padding: 15px; text-align: center;">
-<p>Powered by <strong>STATOBERRY LLP</strong></p>
-</div>
+<p><font size="4">Powered by <strong>STATOBERRY LLP</strong> </font></p>
 </div>
     <div class="nav-footer-right">
-<div style="background-color: #066b23; color: white; padding: 15px; text-align: right;">
-<p><a href="mailto:info@kabcon2025.org" style="color: black; text-decoration: none;">Contact Us</a></p>
-</div>
+<p><font size="4"><a href="mailto:info@kabcon2025.org" style="color: white; text-decoration: none;">Contact Us</a> </font></p>
 </div>
   </div>
 </footer>

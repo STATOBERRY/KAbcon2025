@@ -920,6 +920,449 @@ transition: transform 0.3s ease, box-shadow 0.3s ease;" onmouseover="this.style.
   }
 </style>
 
+<title>Seminar Calendar</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  .calendar-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    padding: 30px;
+  }
+  .event-details {
+    flex: 2;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+  }
+  .event-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px;
+    flex: 1;
+  }
+  .event-text {
+    flex: 2;
+  }
+  .event-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .event-image img {
+  width: auto;              /* keep aspect ratio */
+  height: 350px;            /* increase height */
+  max-width: 100%;          /* prevent overflow */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  object-fit: stretch;      /* keeps full image visible */
+}
+  .calendar {
+    flex: 1;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .calendar-header {
+    text-align: center;
+    padding: 15px;
+    background: #4CAF50;
+    color: white;
+    font-weight: bold;
+  }
+  .calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    padding: 10px;
+    gap: 5px;
+    flex: 1;
+  }
+  .day-name {
+    font-weight: bold;
+    padding: 5px;
+    background: #f0f0f0;
+    border-radius: 5px;
+  }
+  .date {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  .date:hover {
+    background: #e0f7e9;
+  }
+  .event {
+    background: #4CAF50;
+    color: white;
+  }
+</style>
+
+
+
+  <div class="calendar-container">
+    <!-- Event details -->
+    <div class="event-details" id="eventDetails">
+      <div class="event-content">
+        <div class="event-text">
+          <h2 class="anchored">Seminar Important Dates</h2>
+          <p>Click on a highlighted date in the calendar to see details here.</p>
+        </div>
+        <div class="event-image">
+          <img id="eventImage" src="www/abs.jpg" alt="Event Image">
+        </div>
+      </div>
+    </div>
+
+    <!-- Calendar -->
+    <div class="calendar">
+      <div class="calendar-header">September 2025</div>
+      <div class="calendar-grid">
+        <div class="day-name">Mon</div>
+        <div class="day-name">Tue</div>
+        <div class="day-name">Wed</div>
+        <div class="day-name">Thu</div>
+        <div class="day-name">Fri</div>
+        <div class="day-name">Sat</div>
+        <div class="day-name">Sun</div>
+
+        <!-- Example static dates -->
+        <div></div><div>1</div><div>2</div><div>3</div>
+        <div class="date event" data-event="Abstract Submission Deadline: Sept 4" data-img="images/abstract.png">4</div>
+        <div>5</div><div>6</div>
+        <div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div>
+        <div>14</div><div>15</div>
+        <div class="date event" data-event="Full Paper Submission Deadline: Sept 16" data-img="www/abs.jpg">16</div>
+        <div>17</div><div>18</div><div>19</div><div>20</div>
+        <div>21</div><div>22</div><div>23</div><div>24</div>
+        <div class="date event" data-event="Registration Deadline: Sept 25" data-img="images/register.png">25</div>
+        <div>26</div><div>27</div>
+        <div>28</div><div>29</div><div>30</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Handle click on event dates
+    document.querySelectorAll(".date.event").forEach(date => {
+      date.addEventListener("click", function() {
+        document.querySelector(".event-text").innerHTML = `
+          <h2>Event Details</h2>
+          <p>${this.dataset.event}</p>
+        `;
+        document.getElementById("eventImage").src = this.dataset.img;
+      });
+    });
+  </script>
+
+<!-- ⭐ How to Register Section ⭐ -->
+<section class="register-section" id="register">
+  <div class="section-title">How to Register</div>
+  
+  <div class="register-container">
+    <!-- Tab Navigation -->
+    <ul class="tab-nav">
+      <li class="tab-link active" data-tab="step1"><i class="fas fa-user-plus"></i> Step 1</li>
+      <li class="tab-link" data-tab="step2"><i class="fas fa-envelope"></i> Step 2</li>
+      <li class="tab-link" data-tab="step3"><i class="fas fa-edit"></i> Step 3</li>
+      <li class="tab-link" data-tab="step4"><i class="fas fa-credit-card"></i> Step 4</li>
+      <li class="tab-link" data-tab="step5"><i class="fas fa-check-circle"></i> Step 5</li>
+    </ul>
+
+    <!-- Tab Content -->
+    <div class="tab-content active" id="step1">
+      <h3 class="anchored">Create an Account</h3>
+      <p>Click on the "Register" button and create your profile with basic details.</p>
+    </div>
+
+    <div class="tab-content" id="step2">
+      <h3 class="anchored">Verify Email</h3>
+      <p>Check your inbox for a verification email and confirm your registration.</p>
+    </div>
+
+    <div class="tab-content" id="step3">
+      <h3 class="anchored">Fill Application Form</h3>
+      <p>Provide your academic details and select the program or event you want to join.</p>
+    </div>
+
+    <div class="tab-content" id="step4">
+      <h3 class="anchored">Make Payment</h3>
+      <p>Complete the registration by making a secure online payment.</p>
+    </div>
+
+    <div class="tab-content" id="step5">
+      <h3 class="anchored">Confirmation</h3>
+      <p>Receive a confirmation email and get ready to participate!</p>
+    </div>
+  </div>
+</section>
+
+<!-- ⭐ Styling -->
+<style>
+.register-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  color: #6a1b9a;
+  font-weight: bold;
+}
+
+.register-container {
+  max-width: 1000px; /* ⬆️ increased size */
+  margin: auto;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+  padding: 40px; /* ⬆️ more spacing */
+}
+
+.tab-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
+}
+
+.tab-nav li {
+  flex: 1;
+  padding: 14px;
+  cursor: pointer;
+  border-radius: 10px;
+  margin: 0 6px;
+  background: #e1bee7;
+  color: #4a148c;
+  font-weight: bold;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 1rem;
+}
+
+.tab-nav li:hover {
+  background: #ba68c8;
+  color: #fff;
+}
+
+.tab-nav li.active {
+  background: #8e24aa;
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.tab-content h3 {
+  margin-bottom: 12px;
+  color: #8e24aa;
+  font-size: 1.4rem;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; transform: translateY(12px);}
+  to {opacity: 1; transform: translateY(0);}
+}
+</style>
+
+
+<!-- ⭐ JavaScript for Tabs -->
+<script>
+document.querySelectorAll('.tab-link').forEach(tab => {
+  tab.addEventListener('click', function() {
+    // Remove active class from all
+    document.querySelectorAll('.tab-link').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    
+    // Add active to clicked tab and its content
+    this.classList.add('active');
+    document.getElementById(this.dataset.tab).classList.add('active');
+  });
+});
+</script>
+
+
+
+
+<!-- Footer -->
+<div class="footer-wrapper">
+  <footer class="footer">
+    <div class="footer-container">
+
+      <!-- Column 1 -->
+      <div class="footer-column">
+        <h4 class="anchored">Logins</h4>
+        <ul>
+          <li><a href="admin.html">Admin Login</a></li>
+          <li><a href="subadmin.html">Sub Admin Login</a></li>
+          <li><a href="reviewer.html">Reviewer Login</a></li>
+          <li><a href="user.html">User Login</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="footer-column">
+        <h4 class="anchored">Policies</h4>
+        <ul>
+          <li><a href="privacy.html">Privacy Policy</a></li>
+          <li><a href="refund.html">Cancellation &amp; Refund</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="footer-column">
+        <h4 class="anchored">Contact</h4>
+        <ul>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Plant Physiology Conference. All Rights Reserved.
+    </div>
+  </footer>
+</div>
+
+<style>
+/* Full-width wrapper */
+.footer-wrapper {
+  width: 100vw;                       /* span entire viewport width */
+  margin-left: calc(-50vw + 50%);     /* cancel page container limit */
+  background: #3b3737;                /* brown background */
+}
+
+/* Footer main */
+.footer {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Columns container */
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* Individual column */
+.footer-column {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-column h4 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #f1c40f;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-column ul li {
+  margin: 8px 0;
+}
+
+.footer-column ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #f1c40f;
+}
+
+/* Bottom copyright */
+.footer-bottom {
+  text-align: center;
+  padding: 15px;
+  font-size: 14px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Remove white gap before YAML footer */
+main.content {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.footer-wrapper {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+footer.site-footer {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* 🔥 Remove the white strip above YAML footer */
+.page-columns,
+.page-layout,
+.content,
+main.content {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+  background: transparent !important;
+}
+
+/* Ensure custom footer sticks right above YAML footer */
+.footer-wrapper {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+/* Ensure YAML footer starts immediately after */
+footer.site-footer {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+
+</style>
+
 
 
 </main> <!-- /main -->

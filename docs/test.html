@@ -24,7 +24,6 @@ ul.task-list li input[type="checkbox"] {
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
 <script src="site_libs/quarto-search/fuse.min.js"></script>
@@ -39,7 +38,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ddd961a2510921635943dfbbd19534c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-65f68e5805eedf156d919e1153988996.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -110,16 +109,12 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Themes</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./highlights.html"> 
-<span class="menu-text">Highlights</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./tours.html"> 
 <span class="menu-text">Tours</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./test.html" aria-current="page"> 
-<span class="menu-text">test</span></a>
+    <a class="nav-link" href="https://registration-link.com"> 
+<span class="menu-text"><span style="padding:6px 14px; background-color:#5e17eb; color:white; border-radius:6px;">Register</span></span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -411,28 +406,6 @@ document.addEventListener('scroll', function () {
 
 <script>
 
-document.addEventListener('scroll', function() {
-
-  document.querySelectorAll('.scroll-fade-up').forEach(function(el) {
-
-    const rect = el.getBoundingClientRect();
-
-    if (rect.top < window.innerHeight - 100) {
-
-      el.classList.add('visible');
-
-    }
-
-  });
-
-});
-
-</script>
-
-
-
-<script>
-
 document.addEventListener('DOMContentLoaded', function() {
 
   const heroImage = document.querySelector('.hero-image');
@@ -547,13 +520,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 <script>
 
-document.addEventListener("DOMContentLoaded", () => {
-
   const slides = document.querySelectorAll('.slide-img');
 
   let currentSlide = 0;
-
-  const totalSlides = slides.length;
 
 
 
@@ -561,7 +530,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     slides.forEach((slide, i) => {
 
-      slide.style.display = i === index ? 'block' : 'none';
+      slide.classList.toggle('active', i === index);
 
     });
 
@@ -569,21 +538,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-  function nextSlide() {
+  setInterval(() => {
 
-    currentSlide = (currentSlide + 1) % totalSlides;
+    currentSlide = (currentSlide + 1) % slides.length;
 
     showSlide(currentSlide);
 
-  }
-
-
-
-  showSlide(currentSlide);
-
-  setInterval(nextSlide, 3000); // Change slide every 3 seconds
-
-});
+  }, 3000); // change image every 3 seconds
 
 </script>
 
@@ -662,6 +623,62 @@ document.addEventListener("DOMContentLoaded", () => {
   boxes.forEach(box => observer.observe(box));
 
 });
+
+</script>
+
+
+
+
+
+
+
+
+
+<script>
+
+  const countdown = () => {
+
+    const endDate = new Date("October 16, 2025 00:00:00").getTime();
+
+    const now = new Date().getTime();
+
+    const gap = endDate - now;
+
+
+
+    const second = 1000;
+
+    const minute = second * 60;
+
+    const hour   = minute * 60;
+
+    const day    = hour * 24;
+
+
+
+    const d = Math.floor(gap / day);
+
+    const h = Math.floor((gap % day) / hour);
+
+    const m = Math.floor((gap % hour) / minute);
+
+    const s = Math.floor((gap % minute) / second);
+
+
+
+    document.getElementById('days').innerText = d;
+
+    document.getElementById('hours').innerText = String(h).padStart(2, '0');
+
+    document.getElementById('minutes').innerText = String(m).padStart(2, '0');
+
+    document.getElementById('seconds').innerText = String(s).padStart(2, '0');
+
+  };
+
+
+
+  setInterval(countdown, 1000);
 
 </script>
 
@@ -1094,13 +1111,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>© 2025 Kerala State Biodiversity Board &amp; Kerala Agricultural University</p>
+<p><font size="4">© 2025 Kerala State Biodiversity Board &amp; Kerala Agricultural University </font></p>
 </div>   
     <div class="nav-footer-center">
-<p>Powered by STATOBERRY LLP</p>
+<p><font size="4">Powered by <strong>STATOBERRY LLP</strong> </font></p>
 </div>
     <div class="nav-footer-right">
-<p><a href="mailto:info@kabcon2025.org">Contact Us</a></p>
+<p><font size="4"><a href="mailto:info@kabcon2025.org" style="color: white; text-decoration: none;">Contact Us</a> </font></p>
 </div>
   </div>
 </footer>
