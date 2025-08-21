@@ -1115,15 +1115,47 @@ onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8p
   from {opacity: 0; transform: translateY(12px);}
   to {opacity: 1; transform: translateY(0);}
 }
+/* Small devices (up to 768px) */
 @media (max-width: 768px) {
-  register-container {
-    flex: 1 1 100%;
-    transform: scale(1);
-    opacity: 1;
-    max-width: 100%;
+  .register-container {
+    padding: 25px;
+  }
+
+  .tab-nav {
+    flex-direction: column; /* Stack tabs vertically */
+    gap: 10px;
+  }
+
+  .tab-nav li {
+    margin: 5px 0;
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .tab-content {
+    font-size: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8em;
   }
 }
 
+/* Extra small devices (up to 480px) */
+@media (max-width: 480px) {
+  .tab-nav li {
+    font-size: 0.9rem;
+    padding: 10px;
+  }
+
+  .tab-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .register-container {
+    padding: 20px;
+  }
+}
 
 </style>
 
@@ -1142,7 +1174,6 @@ document.querySelectorAll('.tab-link').forEach(tab => {
   });
 });
 </script>
-
 
 ```
 
